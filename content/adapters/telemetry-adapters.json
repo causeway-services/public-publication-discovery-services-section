@@ -1,0 +1,50 @@
+{
+  "id": "publication-discovery-telemetry-adapters-v1",
+  "asOf": "2026-10-03",
+  "google": {
+    "provider": "Google Search Console",
+    "status": "normalizer-implemented",
+    "input": "content-demand-pull JSON",
+    "metrics": [
+      "query",
+      "clicks",
+      "impressions",
+      "ctr",
+      "position"
+    ],
+    "normalizer": "src/import-search-console.mjs",
+    "boundary": "traditional-search-performance"
+  },
+  "bing": {
+    "provider": "Bing Webmaster Tools AI Performance",
+    "status": "provider-export-required",
+    "supportedExperiences": [
+      "Microsoft Copilot",
+      "Bing AI summaries",
+      "select partner integrations"
+    ],
+    "metrics": [
+      "total citations",
+      "cited pages",
+      "average cited pages",
+      "grounding queries",
+      "page citation activity",
+      "time series",
+      "intents",
+      "topics",
+      "citation share",
+      "compare"
+    ],
+    "exportFormats": [
+      "CSV",
+      "Excel"
+    ],
+    "apiStatus": "No documented AI Performance API endpoint verified on 2026-10-03.",
+    "importRule": "Preserve the original export and map fields through an explicit versioned importer before adding them to the observation store.",
+    "interpretationRules": [
+      "grounding queries are aggregate grouped phrases",
+      "citation counts are not rankings",
+      "AI Performance is aggregated and sampled"
+    ]
+  }
+}

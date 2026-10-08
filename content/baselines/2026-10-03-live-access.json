@@ -1,0 +1,41 @@
+{
+  "observedAt": "2026-10-03",
+  "method": "Current public-web accessibility and bounded search sampling from ChatGPT-Web; this is one crawler/search path, not proof of universal outage or de-indexing.",
+  "surfaces": [
+    {
+      "url": "https://561.group/",
+      "result": "public-web-open-unavailable",
+      "interpretation": "Treat live crawlability as unverified/possibly obstructed until an independent fetch or search-engine console confirms reachability.",
+      "repoIntent": "A richer dynamic carrier exists in 561-group/2026-08-04-561-group-dynamic-site, but the currently reachable public state could not be verified through this path."
+    },
+    {
+      "url": "https://market.561.group/",
+      "result": "public-web-open-unavailable",
+      "interpretation": "Declared commercial catalog surface is not verifiably reachable through this crawler path; distinguish deployment intent from live discoverability."
+    },
+    {
+      "url": "https://koios.news/",
+      "result": "public-web-open-readable",
+      "interpretation": "Koios is demonstrably reachable through the same public-web path and exposes current article/archive/feed surfaces.",
+      "observedContent": "Homepage returned current October 3, 2026 stories and links to the 561 market."
+    }
+  ],
+  "searchSamples": [
+    {
+      "query": "site:561.group",
+      "result": "target-domain-not-returned-in-bounded-sample",
+      "note": "Sample returned unrelated pages dominated by telephone-area-code/numeric 561 usage."
+    },
+    {
+      "query": "561 Group",
+      "result": "target-entity-not-returned-in-bounded-sample",
+      "note": "Unrelated FIA, product, address, and other numeric/group entities dominated."
+    },
+    {
+      "query": "Koios News",
+      "result": "target-publication-not-returned-in-bounded-sample",
+      "note": "Results resolved toward unrelated Koios HR-tech/medical entities."
+    }
+  ],
+  "decision": "Do not mark crawl/index/entity layers settled from repository configuration alone. Require an observed public fetch or first-party webmaster/index telemetry receipt."
+}

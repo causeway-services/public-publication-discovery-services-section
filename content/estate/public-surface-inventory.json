@@ -1,0 +1,55 @@
+{
+  "id": "561-public-surface-inventory-v1",
+  "asOf": "2026-10-03",
+  "rule": "Inventory public surfaces by authority and mutation rights before optimizing them. A public association is not ownership; a client property is not a 561 publication; a built carrier is not a deployed carrier.",
+  "classes": [
+    {
+      "class": "561-corporate",
+      "mutationPosture": "owned-but-current-github-app-write-blocked",
+      "surfaces": [
+        "https://561.group/",
+        "https://market.561.group/"
+      ],
+      "discoveryPosture": "corporate entity/crawl remediation priority"
+    },
+    {
+      "class": "federated-public-enterprise",
+      "mutationPosture": "enterprise-owned; current Koios repo writable",
+      "surfaces": [
+        "https://koios.news/"
+      ],
+      "discoveryPosture": "reference implementation; entity collision still observed"
+    },
+    {
+      "class": "community-enterprise",
+      "mutationPosture": "Turntide source writable; public deployment unsettled",
+      "surfaces": [
+        "https://turntide-islands.561.group/"
+      ],
+      "discoveryPosture": "built semantic surface awaiting public settlement and observation"
+    },
+    {
+      "class": "561-operated-persona-publication",
+      "mutationPosture": "publication-specific authority",
+      "surfaces": [
+        "https://cassia-lorne.substack.com/",
+        "https://ecency.com/@cassia-lorne"
+      ],
+      "discoveryPosture": "canonical identity fragmented across platform surfaces"
+    },
+    {
+      "class": "personal-affiliated",
+      "mutationPosture": "observe-only under Publication Discovery unless owner explicitly authorizes mutation",
+      "surfaces": [
+        "https://emsenn.net/"
+      ],
+      "discoveryPosture": "strong affiliated authority; never treat as 561-owned link inventory"
+    }
+  ],
+  "excludedByDefault": [
+    "client-owned properties",
+    "third-party properties merely mentioned by 561 publications",
+    "private Discord/member surfaces",
+    "repositories and services with no intended public discovery surface"
+  ]
+}

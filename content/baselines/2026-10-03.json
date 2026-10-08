@@ -1,0 +1,42 @@
+{
+  "observedAt": "2026-10-03",
+  "method": "Internal repository inspection plus bounded public-web sampling; this is an observation baseline, not a comprehensive ranking study.",
+  "findings": [
+    {
+      "publication": "561-group-corporate",
+      "layer": "entity",
+      "status": "material-gap",
+      "evidence": "Sampled brand search did not surface the canonical site usefully and returned strong unrelated entity collisions."
+    },
+    {
+      "publication": "561-group-corporate",
+      "layer": "crawl",
+      "status": "material-gap",
+      "evidence": "Current site repository previously inspected as a single static index page without robots.txt, sitemap.xml, canonical link, or Organization JSON-LD."
+    },
+    {
+      "publication": "koios-news",
+      "layer": "crawl-content-evidence-distribution",
+      "status": "strong-reference",
+      "evidence": "Current repository and live site expose article pages, NewsArticle JSON-LD, RSS/Atom/JSON feeds, sitemaps, robots, public standards/corrections, and a topic/coverage graph."
+    },
+    {
+      "publication": "koios-news",
+      "layer": "measurement",
+      "status": "gap",
+      "evidence": "No durable Bing AI Performance / citation-grounding telemetry integration was found in the current Koios repository search."
+    },
+    {
+      "publication": "cassia-lorne-routine-read",
+      "layer": "entity-distribution",
+      "status": "fragmented",
+      "evidence": "Historical posts are discoverable via Hive/Ecency while the canonical Substack identity is not yet a settled group-wide discovery contract."
+    },
+    {
+      "publication": "emsenn-net",
+      "layer": "entity-content",
+      "status": "strong-affiliated",
+      "evidence": "Live homepage exposes clear author identity, research subject, canonical domain, and readable descriptive content."
+    }
+  ]
+}

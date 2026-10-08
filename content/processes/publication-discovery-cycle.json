@@ -1,0 +1,39 @@
+{
+  "id": "publication-discovery-cycle-v1",
+  "type": "MAPE-K-publication-discovery-cycle",
+  "purpose": "Continuously turn the 561 Group public estate into accurately discoverable, attributable, and measurable media without creating a separate GEO content mill.",
+  "monitor": [
+    "enumerate public properties and changed public artifacts since the previous cycle",
+    "read each property's authority boundary and publication-discovery manifest",
+    "ingest available first-party crawl/index/search/AI citation/referral/conversion telemetry",
+    "run bounded representative query sets for entity, topic, navigational, informational, comparative, and commercial intents where appropriate",
+    "record observations separately for entity resolution, retrieval, mention, citation, prominence, factuality, freshness, referral, and conversion"
+  ],
+  "analyze": [
+    "distinguish publication defects from measurement gaps and platform variance",
+    "identify entity collisions, orphaned authority, missing canonical relationships, thin topic coverage, stale facts, unsupported claims, and correction drift",
+    "compare observed answer/citation behavior with the publication's own canonical facts and audience intent",
+    "prefer existing strong first-party artifacts over manufacturing new pages"
+  ],
+  "plan": [
+    "rank changes by end-user consequence, cross-property reuse, evidence strength, and cost",
+    "route each remediation to the owning publication or shared publishing primitive",
+    "choose the smallest change that can falsifiably improve the broken layer",
+    "never plan a GEO-only rewrite when ordinary technical/content/evidence repair addresses the cause"
+  ],
+  "execute": [
+    "make authorized low-risk fixes directly in the owning repository",
+    "add or repair canonical identity, structured data, sitemaps, feeds, topic relations, internal links, correction propagation, and crawler access where evidenced",
+    "open/update the receiving pull request and carry it through checks/review as far as authority permits",
+    "for blocked writes, update the existing blocker with an exact patch and acceptance test rather than spawning duplicate diagnosis"
+  ],
+  "knowledge": [
+    "append dated observations and before/after query evidence",
+    "update property manifests only after a capability is actually observed",
+    "retain failed experiments and platform-specific findings",
+    "promote reusable successful fixes into shared publishing infrastructure",
+    "feed proven techniques and measured economics downstream to Causeway AI Visibility Assurance"
+  ],
+  "publicationChangeTrigger": "Any new publication, material redesign, domain/canonical change, major topic expansion, correction/retraction, product/service launch, or sustained answer/citation shift reopens the relevant layers.",
+  "success": "The media estate becomes more accurately discoverable and citeable while preserving publication integrity; success is evidenced layer-by-layer, never by a single GEO score."
+}

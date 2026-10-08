@@ -1,0 +1,42 @@
+{
+  "id": "561-publication-discovery-portfolio-2026-10-03",
+  "asOf": "2026-10-03",
+  "priorityRule": "Fix the layer that most blocks accurate discovery of high-value existing work before commissioning more content.",
+  "lanes": [
+    {
+      "priority": 1,
+      "property": "561-group-corporate",
+      "rationale": "Canonical corporate identity is weak and highly collision-prone, so every downstream relationship and service suffers from ambiguous publisher identity.",
+      "activeCarrier": "GitHub issue #75 plus Publication Discovery PR #120",
+      "nextReceipt": "deployed corporate identity/crawl patch followed by brand/entity query re-baseline"
+    },
+    {
+      "priority": 2,
+      "property": "koios-news",
+      "rationale": "Strongest existing publication stack and therefore the best reference implementation for group-wide discovery primitives.",
+      "activeCarrier": "emsenn/koios-news PR #2",
+      "nextReceipt": "homepage NewsMediaOrganization identity merged and observed on the public site"
+    },
+    {
+      "priority": 3,
+      "property": "koios-news-measurement",
+      "rationale": "Publication quality is unusually strong but AI-answer/citation telemetry is not yet integrated into its learning loop.",
+      "activeCarrier": "Publication Discovery contract; provider integration not yet implemented",
+      "nextReceipt": "first Bing AI Performance or equivalent first-party citation/grounding import recorded without collapsing metrics"
+    },
+    {
+      "priority": 4,
+      "property": "persona-and-newsletter-estate",
+      "rationale": "Platform syndication can fragment entity/canonical authority; solve the reusable identity/canonical contract before scaling more personas.",
+      "activeCarrier": "Cassia Lorne manifest as first specimen",
+      "nextReceipt": "one persona publication demonstrates canonical cross-platform identity and correction propagation"
+    },
+    {
+      "priority": 5,
+      "property": "cross-property-entity-graph",
+      "rationale": "561 owns multiple publications/products but engines currently have little first-party evidence describing how they relate.",
+      "activeCarrier": "Publication Discovery Services",
+      "nextReceipt": "machine-readable and human-visible group relationship graph projected from confirmed ownership/editorial relationships"
+    }
+  ]
+}

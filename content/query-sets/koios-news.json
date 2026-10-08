@@ -1,0 +1,36 @@
+{
+  "publication": "koios-news",
+  "version": 1,
+  "queries": [
+    {
+      "query": "Koios News",
+      "intent": "navigational",
+      "topic": "entity",
+      "expected": "resolve Koios.News publication"
+    },
+    {
+      "query": "What is Koios.News?",
+      "intent": "informational",
+      "topic": "entity",
+      "expected": "describe the publication, editorial model, and canonical site accurately"
+    },
+    {
+      "query": "Koios News AI disclosure",
+      "intent": "informational",
+      "topic": "editorial-standards",
+      "expected": "surface the publication's explicit AI disclosure"
+    },
+    {
+      "query": "Koios News corrections policy",
+      "intent": "informational",
+      "topic": "editorial-standards",
+      "expected": "surface correction/public-record mechanisms"
+    },
+    {
+      "query": "Koios News systems analysis",
+      "intent": "informational",
+      "topic": "editorial-positioning",
+      "expected": "connect the description to first-party About/standards evidence"
+    }
+  ]
+}

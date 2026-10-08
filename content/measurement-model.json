@@ -1,0 +1,34 @@
+{
+  "id": "publication-discovery-measurement-v1",
+  "dimensions": [
+    "crawl_eligible",
+    "indexed_or_known",
+    "entity_resolution",
+    "retrieved",
+    "mentioned",
+    "cited",
+    "citation_share_where_available",
+    "prominence",
+    "factuality",
+    "freshness",
+    "referral",
+    "conversion"
+  ],
+  "observationKey": [
+    "publication",
+    "surface",
+    "surfaceMode",
+    "observedAt",
+    "locale",
+    "query",
+    "intent",
+    "topic"
+  ],
+  "sourcePriority": [
+    "first-party search/webmaster telemetry",
+    "repeatable public search/answer observations",
+    "publication server/referral logs",
+    "third-party tooling as supplementary evidence"
+  ],
+  "rule": "Never infer one dimension from another. A citation is not correctness; a mention is not a citation; index eligibility is not retrieval; retrieval is not conversion."
+}
