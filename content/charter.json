@@ -1,0 +1,28 @@
+{
+  "id": "publication-discovery-services-section",
+  "type": "internal-publication-service",
+  "customer": "561 Group public publishers and public service surfaces",
+  "outcome": "Public 561 work can be discovered, entity-resolved, retrieved, cited, represented accurately, and measured across search and AI-mediated answer systems without using spam or synthetic visibility hacks.",
+  "responsibilities": [
+    "maintain the public-property inventory and authority boundaries",
+    "define and verify the publication discovery contract",
+    "measure crawl, entity, content, evidence, distribution, retrieval, and measurement layers independently",
+    "import first-party Search Console and Bing Webmaster/AI Performance evidence when available",
+    "maintain representative human-language query sets by publication and topic",
+    "return concrete remediation work to the owning publication rather than merely generating reports",
+    "share proven discovery primitives across publications",
+    "feed validated methods downstream to Causeway commercialization"
+  ],
+  "prohibitions": [
+    "single opaque GEO scores",
+    "scaled pages created primarily to manipulate generative answers",
+    "fake mentions, link schemes, or invented third-party authority",
+    "special markup claimed to influence Google generative search without evidence",
+    "mutating personal or third-party properties without authority",
+    "confusing citation frequency with factual correctness or commercial value"
+  ],
+  "provenance": {
+    "leaderDirective": "2026-10-03: refocus from the mock customer onto the fact that 561 Group is a large media enterprise with almost no deliberate GEO program",
+    "formedBy": "ChatGPT-Web CPO/CTO"
+  }
+}

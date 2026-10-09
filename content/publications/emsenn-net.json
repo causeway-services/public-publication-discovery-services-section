@@ -1,0 +1,18 @@
+{
+  "id": "emsenn-net",
+  "authority": "personal-property-observe-only",
+  "status": "public-affiliated-authority-surface",
+  "canonicalEntityName": "emsenn",
+  "canonicalEntityUrl": "https://emsenn.net/",
+  "entityType": "Person",
+  "publisherOrOwner": "emsenn / Morgan Sennhauser",
+  "surfaces": [
+    "https://emsenn.net/"
+  ],
+  "mutationRule": "Do not mutate under 561 Group authority without explicit owner instruction.",
+  "baseline": {
+    "observedAt": "2026-10-03",
+    "finding": "Public home clearly identifies emsenn, describes the research corpus, names the canonical domain, and exposes authorship/context in readable HTML.",
+    "useFor561": "Potential third-party/affiliated authority and cross-reference surface only when editorially relevant; never manufacture links for SEO."
+  }
+}

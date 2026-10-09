@@ -1,0 +1,13 @@
+{
+  "name": "@561-group/publication-discovery-services-section",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check src/audit-publication.mjs && node --check src/audit-estate.mjs && node --check src/observation.mjs && node --check src/record-observation.mjs && node --check src/import-search-console.mjs && node --check src/project-public-entity-graph.mjs && node --check src/verify.mjs",
+    "test": "node --test test/*.test.mjs",
+    "audit:estate": "node src/audit-estate.mjs",
+    "record:observation": "node src/record-observation.mjs",
+    "verify": "node src/verify.mjs && node --test test/*.test.mjs"
+  }
+}
