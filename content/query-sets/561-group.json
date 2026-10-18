@@ -1,0 +1,36 @@
+{
+  "publication": "561-group-corporate",
+  "version": 1,
+  "queries": [
+    {
+      "query": "561 Group",
+      "intent": "navigational",
+      "topic": "entity",
+      "expected": "resolve to The 561 Group rather than unrelated numeric/entity collisions"
+    },
+    {
+      "query": "What is the 561 Group?",
+      "intent": "informational",
+      "topic": "entity",
+      "expected": "accurate concise organization description with canonical source"
+    },
+    {
+      "query": "What does 561 Group publish?",
+      "intent": "informational",
+      "topic": "media-estate",
+      "expected": "identify current canonical publications and their relationships"
+    },
+    {
+      "query": "561 Group Koios News",
+      "intent": "navigational",
+      "topic": "relationship",
+      "expected": "resolve the relationship using first-party evidence"
+    },
+    {
+      "query": "561 Group services AI agents",
+      "intent": "commercial",
+      "topic": "services",
+      "expected": "surface only services actually offered publicly"
+    }
+  ]
+}
