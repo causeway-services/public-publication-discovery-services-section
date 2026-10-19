@@ -1,36 +1,17 @@
 import { readFileSync } from "node:fs";
 import { pathToFileURL } from "node:url";
+import discoveryContract from "../content/standards/publication-discovery-contract.json" with { type: "json" };
 
-export const LAYERS = Object.freeze({
-  crawl: Object.freeze({
-    required: ["publicHome","canonicalUrls","robots","sitemap"],
-    recommended: ["indexingConsole","freshnessNotification"],
-  }),
-  entity: Object.freeze({
-    required: ["canonicalEntityName","canonicalEntityUrl","entityType","publisherOrOwner"],
-    recommended: ["structuredEntity","authorEntities","sameAsEvidence","crossPropertyRelations"],
-  }),
-  content: Object.freeze({
-    required: ["descriptiveTitles","descriptions","semanticHeadings","stablePublicUrls"],
-    recommended: ["articleOrProductSemantics","publishedModifiedDates","sectionsTopics","preferredImages"],
-  }),
-  evidence: Object.freeze({
-    required: ["claimSourceBoundary"],
-    recommended: ["citations","correctionPolicy","provenance","originalDataOrExperience"],
-  }),
-  distribution: Object.freeze({
-    required: [],
-    recommended: ["rssOrAtom","jsonFeed","topicGraph","structuredSyndication","socialMetadata"],
-  }),
-  retrieval: Object.freeze({
-    required: ["querySet"],
-    recommended: ["intentSet","topicSet","entityDisambiguationQueries","comparativeQueries"],
-  }),
-  measurement: Object.freeze({
-    required: ["observationLedger"],
-    recommended: ["searchConsole","bingWebmaster","bingAiPerformance","citationObservations","referralAnalytics","conversionObservations"],
-  }),
-});
+// Executable layer selection consumes the existing canonical typed contract;
+// individual capabilities must not be maintained as a second handwritten list.
+export const LAYERS = Object.freeze(Object.fromEntries(
+  Object.entries(discoveryContract.layers).map(([name, layer]) => [
+    name, Object.freeze({
+      required: Object.freeze([...layer.required]),
+      recommended: Object.freeze([...layer.recommended]),
+    }),
+  ])
+));
 
 const present = (value) => value === true || (typeof value === "string" && !["", "false", "none", "unknown"].includes(value.toLowerCase()));
 

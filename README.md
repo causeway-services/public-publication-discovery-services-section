@@ -30,6 +30,19 @@ There is deliberately no single "GEO score." A publication can be excellent
 at crawl/indexing and poor at entity resolution, or frequently cited while
 being represented inaccurately.
 
+## Answer-surface observations
+
+The `record:observation` operation accepts a typed observation with independent
+`retrieved`, `mentioned`, and `cited` measurements. Set `retrieved: null`
+when the answer engine's internal retrieval is unknown; citing an article does
+not prove a witnessed fetch, and a source citation can appear without an
+explicit publisher-name mention. The recorded citation URL and evidence source
+remain required for a positive citation observation.
+
+The seven executable publication layers are read from the original
+`content/standards/publication-discovery-contract.json`, not maintained
+in a second code-only capability registry.
+
 ## Current baseline
 
 - **Koios.News** is the reference implementation: NewsArticle JSON-LD, feeds,

@@ -64,7 +64,11 @@
       ]
     },
     "retrieved": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ],
+      "description": "Observed retrieval when known; null means the answer engine's retrieval was not independently observable. Do not infer this from citations or brand mentions."
     },
     "mentioned": {
       "type": "boolean"

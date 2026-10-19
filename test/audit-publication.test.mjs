@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { auditPublication } from "../src/audit-publication.mjs";
+import { auditPublication, LAYERS } from "../src/audit-publication.mjs";
+import discoveryContract from "../content/standards/publication-discovery-contract.json" with { type: "json" };
 
 const base={
   id:"fixture",
@@ -50,4 +51,12 @@ test("platform-dependent strings count as an observed capability rather than a f
   manifest.capabilities.robots="platform-dependent";
   const result=auditPublication(manifest);
   assert.notEqual(result.layers.crawl.status,"blocked");
+});
+
+test("the source-owned discovery contract is exactly the executable layer program",()=>{
+  assert.deepEqual(Object.keys(LAYERS),Object.keys(discoveryContract.layers));
+  for(const [key,record] of Object.entries(discoveryContract.layers)){
+    assert.deepEqual(LAYERS[key].required,record.required);
+    assert.deepEqual(LAYERS[key].recommended,record.recommended);
+  }
 });

@@ -16,7 +16,10 @@ export function observationViolations(value) {
   }
   if (!iso(value.observedAt)) errors.push("observedAt must be an ISO/date-time parseable string");
   if (!ENTITY.has(value.entityResolution)) errors.push("entityResolution is invalid");
-  for (const key of ["retrieved","mentioned","cited"]) if (!boolean(value[key])) errors.push(`${key} must be boolean`);
+  // External answer surfaces rarely expose the model's actual retrieval.
+  // Preserve an explicit unknown rather than inferring retrieval from citation.
+  if (value.retrieved !== null && !boolean(value.retrieved)) errors.push("retrieved must be boolean or null");
+  for (const key of ["mentioned","cited"]) if (!boolean(value[key])) errors.push(`${key} must be boolean`);
   if (value.prominence !== undefined && !PROMINENCE.has(value.prominence)) errors.push("prominence is invalid");
   if (!FACTUALITY.has(value.factuality)) errors.push("factuality is invalid");
   if (value.freshness !== undefined && !FRESHNESS.has(value.freshness)) errors.push("freshness is invalid");
@@ -28,10 +31,6 @@ export function observationViolations(value) {
   }
   if (value.cited === true && (!Array.isArray(value.citationUrls) || value.citationUrls.length === 0)) {
     errors.push("cited=true requires at least one citationUrls entry");
-  }
-  if (value.mentioned === false && value.cited === true) errors.push("cited=true cannot coexist with mentioned=false");
-  if (value.retrieved === false && (value.mentioned === true || value.cited === true)) {
-    errors.push("retrieved=false cannot coexist with mentioned/cited=true");
   }
   if (value.entityResolution === "wrong-entity" && value.factuality === "accurate") {
     errors.push("wrong-entity cannot be classified factuality=accurate for the target publication");

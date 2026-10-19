@@ -29,10 +29,17 @@ test("admits a layer-separated observation",()=>{
   assert.equal(assertObservation(base).cited,true);
 });
 
-test("citation cannot exist without retrieval and mention",()=>{
-  const value={...base,retrieved:false,mentioned:false};
-  const violations=observationViolations(value).join(" ");
-  assert.match(violations,/mentioned=false|retrieved=false/u);
+test("observed citation does not invent hidden model retrieval or brand mention",()=>{
+  const value={...base,retrieved:null,mentioned:false};
+  const admitted=assertObservation(value);
+  assert.equal(admitted.retrieved,null);
+  assert.equal(admitted.mentioned,false);
+  assert.equal(admitted.cited,true);
+});
+test("answer retrieval, brand mention and citation are independent measurements",()=>{
+  assert.deepEqual(observationViolations({...base,retrieved:false,mentioned:false,cited:true}),[]);
+  assert.deepEqual(observationViolations({...base,retrieved:null,mentioned:true,cited:false}),[]);
+  assert.match(observationViolations({...base,retrieved:"inferred"}).join(" "),/retrieved/u);
 });
 
 test("wrong entity cannot be called accurate for the target",()=>{
