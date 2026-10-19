@@ -9,5 +9,9 @@
     "audit:estate": "node src/audit-estate.mjs",
     "record:observation": "node src/record-observation.mjs",
     "verify": "node src/verify.mjs && node --test test/*.test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/causeway-services/publication-discovery-services-section.git"
   }
 }
