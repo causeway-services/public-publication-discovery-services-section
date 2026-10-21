@@ -1,36 +1,130 @@
 {
   "publication": "561-group-corporate",
-  "version": 1,
+  "version": 2,
   "queries": [
     {
       "query": "561 Group",
       "intent": "navigational",
       "topic": "entity",
-      "expected": "resolve to The 561 Group rather than unrelated numeric/entity collisions"
+      "expected": "resolve to The 561 Group rather than unrelated numeric/entity collisions",
+      "role": "branded"
     },
     {
       "query": "What is the 561 Group?",
       "intent": "informational",
       "topic": "entity",
-      "expected": "accurate concise organization description with canonical source"
+      "expected": "accurate concise organization description with canonical source",
+      "role": "branded"
     },
     {
       "query": "What does 561 Group publish?",
       "intent": "informational",
       "topic": "media-estate",
-      "expected": "identify current canonical publications and their relationships"
+      "expected": "identify current canonical publications and their relationships",
+      "role": "branded"
     },
     {
       "query": "561 Group Koios News",
       "intent": "navigational",
       "topic": "relationship",
-      "expected": "resolve the relationship using first-party evidence"
+      "expected": "resolve the relationship using first-party evidence",
+      "role": "branded"
     },
     {
       "query": "561 Group services AI agents",
       "intent": "commercial",
       "topic": "services",
-      "expected": "surface only services actually offered publicly"
+      "expected": "surface only services actually offered publicly",
+      "role": "branded"
+    },
+    {
+      "query": "561 Group original mathematics Obsmetrologia",
+      "intent": "navigational",
+      "topic": "mathematics",
+      "role": "branded",
+      "expected": "Find genuine Obsmetrologia Science sources and distinguish research program, publicly released results and verified proofs."
+    },
+    {
+      "query": "How does Obsmetrologia derive mathematics from marks?",
+      "intent": "scholarly",
+      "topic": "mathematics",
+      "role": "branded",
+      "expected": "Describe the known status of Mark, Utterance, Articulating, Predicating, Positing and Settling from actual Science sources without inventing formal proofs."
+    },
+    {
+      "query": "What foundations of mathematics start from relations and marks?",
+      "intent": "scholarly",
+      "topic": "mathematics",
+      "role": "unbranded",
+      "expected": "Surface genuinely relevant scholarship and, if appropriate, independently accessible original 561 sources rather than falsely privileging any one author."
+    },
+    {
+      "query": "What are peer-reviewed alternatives to standard mathematical foundations?",
+      "intent": "comparative",
+      "topic": "mathematics",
+      "role": "control",
+      "expected": "Return appropriate external mathematical scholarship; the 561 Group need not appear."
+    },
+    {
+      "query": "561 Group agent offices ActivityPub",
+      "intent": "navigational",
+      "topic": "agentics",
+      "role": "branded",
+      "expected": "Identify actually published 561 agent institutional research and operational evidence, not a generic AI consultancy."
+    },
+    {
+      "query": "How can persistent AI agents hold roles and coordinate verifiable tasks?",
+      "intent": "technical",
+      "topic": "agentics",
+      "role": "unbranded",
+      "expected": "Explain agent office and durable work patterns with citations to implementation evidence; mention 561 only if relevant and available."
+    },
+    {
+      "query": "Compare ActivityPub agent actors and other multi-agent coordination frameworks",
+      "intent": "comparative",
+      "topic": "agentics",
+      "role": "unbranded",
+      "expected": "Compare actual standards and implementations, distinguishing protocol features and proposed institutional extensions."
+    },
+    {
+      "query": "561 Group artificial intelligence research",
+      "intent": "navigational",
+      "topic": "artificial-intelligence",
+      "role": "branded",
+      "expected": "Identify Science-owned AI research and independently accessible engineering or operational outputs where public."
+    },
+    {
+      "query": "How can AI agents verify source-to-deployment work and independent acceptance?",
+      "intent": "technical",
+      "topic": "artificial-intelligence",
+      "role": "unbranded",
+      "expected": "Retrieve grounded software verification/agent research, including 561 work only if it supplies accessible distinctive evidence."
+    },
+    {
+      "query": "What empirical evidence supports recursively self-improving AI agents?",
+      "intent": "scholarly",
+      "topic": "artificial-intelligence",
+      "role": "unbranded",
+      "expected": "Separate measured self-improvement of agent systems from untested stronger intelligence claims, based on evidence."
+    },
+    {
+      "query": "What is Group 561 real estate?",
+      "intent": "informational",
+      "topic": "entity",
+      "role": "control",
+      "expected": "Resolve the unrelated referent if applicable without misattributing real-estate entities to The 561 Group."
     }
-  ]
+  ],
+  "study": {
+    "id": "agentics-ai-mathematics-discoverability-2026-10-20",
+    "aim": "Detect whether actual original 561 research and implemented agentic work can be discovered and correctly attributed for navigational, conceptual, comparative and technical intent.",
+    "baseline": "No new search or AI-answer observations are claimed by this query set. Dated 2026-10-03 observations remain historical; collect independent current observations in the original ledger.",
+    "comparison": "Use paired branded and unbranded queries, non-target controls, named engines, disclosed locale/run/time and unchanged queries before/after an independently received release.",
+    "stopRule": "Absence of a citation is not proof of no retrieval or of index exclusion; provenance and responsible publisher govern any resulting publication or site change.",
+    "evidenceSources": [
+      "https://developers.google.com/search/docs/appearance/ai-features",
+      "https://blogs.bing.com/webmaster/2026/10/introducing-topics-portfolio-beta-in-ai-performance/",
+      "https://scholar.google.com/intl/en/scholar/inclusion.html"
+    ]
+  }
 }
