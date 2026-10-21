@@ -218,3 +218,50 @@ tests, original release/install evidence, independent public readback,
 and measured corrected source findability or improved real reader task.
 A query plan, test pass, source merge, public deployment and user-visible
 SEO/GEO effect are five different statuses.
+
+## October 21, 2026: actual sampled branded discovery observations
+
+Three genuinely witnessed public Web-search **result samples** are recorded
+separately from the October 3 historical baselines at
+[`content/observations/2026-10-21-branded-public-search.jsonl`](content/observations/2026-10-21-branded-public-search.jsonl).
+They use the existing observation schema and are checked in the native verifier.
+
+- Exact queries: `561 Group`, `What is the 561 Group?`, `Koios News`.
+- Actual observed surface: a finite set of results returned by ChatGPT's
+  **slow public Web search** interface on October 21. It is **not** a
+  verified Google Search, Bing Webmaster, or AI-generated answer measurement.
+  The underlying search provider, placement/rank, exhaustive hit set and
+  geographic locale were not exposed. Record `locale: "und"` and
+  `retrieved: null`; do not impute a device location.
+- The two corporate samples did not resolve `https://561.group/` in their
+  returned result snippets. The Koios sample instead returned unrelated
+  Koios organizations. Those are *sample-level* disambiguation misses,
+  not proven absence from an index, not provider-wide counts.
+- Independently opening `https://koios.news/` with the public Web tool on
+  the same date **succeeded**, so the Koios search miss must not be turned
+  into an availability or deindexing claim. Attempted Web-tool opens of
+  `https://561.group/`, `robots.txt`, `sitemap.xml`, and `llms.txt`
+  did not produce accessible pages through that tool, but this also does
+  not establish a real server outage or status code.
+
+These results **do not establish a before/after change**: the October 3
+baseline and the October 21 sample were not witnessed on a qualified
+identical search provider, locale or ranking surface. No new search rank,
+visibility score, real AI citation, actual model fetch, conversion or
+indexing diagnosis can be inferred.
+
+Read both types of original publication observations with:
+
+```sh
+node src/analyze-observations.mjs content/query-sets/561-group.json content/observations/2026-10-21-branded-public-search.jsonl
+node src/analyze-observations.mjs content/query-sets/koios-news.json content/observations/2026-10-21-branded-public-search.jsonl
+```
+
+**Next useful effect:** original site/release owners should verify
+`561.group` from an independent reachable network with HTTP/TLS status,
+resolved IP, content hashes, robots/sitemap and CDN version; only then
+attribute any reachable-page discrepancy to source or deployment. The
+original Koios publication owner should check independent GSC/Bing index
+data and search-engine-specific samples before selecting a canonical
+identity remediation. Neither estate deserves manufactured AI-only markup
+or uncontrolled SEO landing pages.

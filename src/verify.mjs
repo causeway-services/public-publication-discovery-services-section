@@ -50,6 +50,18 @@ if (panelRequests.some((request)=>"cited" in request || "retrieved" in request |
 const historicalRows=readFileSync(resolve(ROOT,"content/observations/2026-10-03-public-search-baseline.jsonl"),"utf8").trim().split(/\r?\n/u).map((line)=>JSON.parse(line));
 const historicalSummary=summarizeObservedPanel(querySet,historicalRows);
 if (historicalSummary.totalObserved!==1 || historicalSummary.observedDistinctQueries!==1) throw new Error("dated historical search observation was lost or fabricated");
+const observedFile="content/observations/2026-10-21-branded-public-search.jsonl";
+const recentCount=verifyJsonl(observedFile,assertObservation);
+const recentRows=readFileSync(resolve(ROOT,observedFile),"utf8").trim().split(/\r?\n/u).map((line)=>JSON.parse(line));
+const recentGroup=summarizeObservedPanel(querySet,recentRows);
+const recentKoios=summarizeObservedPanel(readJson("content/query-sets/koios-news.json"),recentRows);
+if (recentCount!==3 || recentGroup.totalObserved!==2 || recentGroup.observedDistinctQueries!==2 ||
+    recentKoios.totalObserved!==1 || recentKoios.observedDistinctQueries!==1 ||
+    recentRows.some((row)=>row.retrieved!==null || row.cited!==false || row.mentioned!==false ||
+      row.surface!=="ChatGPT Web public search (slow)" || row.locale!=="und" || !row.evidence?.some((item)=>item.kind==="url"))) {
+  throw new Error("October 21 sampled branded-search evidence lost or falsely elevated into answer-engine metrics");
+}
+
 
 if (estate.publicationCount < 4) throw new Error("publication inventory unexpectedly shrank below founding baseline");
 if (projected["@graph"].length < 2) throw new Error("public entity projection unexpectedly empty");
@@ -68,5 +80,8 @@ process.stdout.write(JSON.stringify({
   scientificQueryRequests:panelRequests.length,
   northlandPrivateQueryRequests:northlandRequests.length,
   historicalCorporateObservations:historicalSummary.totalObserved,
+  witnessedOctober21SearchSamples:recentCount,
+  observedOctober21CorporateQueries:recentGroup.observedDistinctQueries,
+  observedOctober21KoiosQueries:recentKoios.observedDistinctQueries,
   scientificTopics:[...topicSet].filter((topic)=>["agentics","artificial-intelligence","mathematics"].includes(topic))
 },null,2)+"\n");
