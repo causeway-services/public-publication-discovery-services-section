@@ -55,9 +55,14 @@ export function checkedQueryLocation(query, value) {
       (!location || location.mechanism === "query-text")) {
     throw new TypeError('"near me" requires an explicit provider-setting or device-location context');
   }
-  if (location && location.mechanism === "query-text" &&
-      !query.toLocaleLowerCase("en").includes(location.place.address.addressLocality.toLocaleLowerCase("en"))) {
-    throw new TypeError("query-text locationContext must appear in the literal search query");
+  if (location && location.mechanism === "query-text") {
+    const address = location.place.address;
+    const tokens = query.toUpperCase().split(/[^A-Z0-9]+/u).filter(Boolean);
+    const regionSuffix = address.addressRegion.split("-").slice(1).join("");
+    if (!query.toLocaleLowerCase("en").includes(address.addressLocality.toLocaleLowerCase("en")) ||
+        !tokens.includes(regionSuffix)) {
+      throw new TypeError("query-text locationContext must name the locality and subdivision code in the literal query");
+    }
   }
   return location;
 }
