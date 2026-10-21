@@ -96,7 +96,7 @@ test("explicit query geography rejects wrong state or missing locality; ISO regi
   assert.equal(checkedQueryLocation(textQuery.query, textQuery.locationContext).place.address.addressRegion, "US-MN");
   assert.throws(() => checkedQueryLocation(textQuery.query, location("Duluth", "US-GA", "query-text")), /subdivision code/u);
   assert.throws(() => checkedQueryLocation(textQuery.query, location("Superior", "US-MN", "query-text")), /locality/u);
-  assert.throws(() => checkedQueryLocation(textQuery.query, location("Duluth", "CA-ON", "query-text")), /subdivision code/u);
+  assert.throws(() => checkedQueryLocation(textQuery.query, location("Duluth", "CA-ON", "query-text")), /subdivision does not belong/u);
   assert.throws(() => checkedQueryLocation(textQuery.query, { ...textQuery.locationContext, place: { ...textQuery.locationContext.place, address: { ...textQuery.locationContext.place.address, addressCountry: "USA" } } }), /ISO country/u);
 });
 
