@@ -70,6 +70,53 @@ The audit reports layer-by-layer residuals and never compresses them into a
 proprietary score.
 
 
+## Geographic search context: Northland private QA
+
+Search **locale** is not the observer's **location**. The original query
+compiler, answer recorder and summary now accept optional `locationContext`
+with a typed schema.org `Place` / `PostalAddress` and a separate search
+`mechanism`: `query-text`, `provider-setting`, or `device-location`.
+Country and subdivision identifiers use ISO 3166 codes (for example `US`
+and `US-MN`); the validator checks code format and country prefix, not a
+complete authoritative worldwide subdivision registry.
+
+- With `query-text`, the literal query must contain both locality and the
+  region code (`Duluth MN` is unambiguous for this panel). A city name alone
+  is insufficient to distinguish Duluth, MN from Duluth, GA.
+- For `near me`, a planned `provider-setting` or `device-location` is
+  mandatory. The generated request **does not prove that a search engine
+  applied that location**. An observer must witness the actual setting and
+  preserve the evidence when recording an answer. If the selected surface
+  cannot apply/verify it, do not record that query as a geo-qualified result.
+- A recorded location must match its versioned query/location pair to count
+  against that panel. Location-unqualified and out-of-scope samples are not
+  silently pooled, nor scored as negative findings. Use the structured
+  `missingQueryContexts` and `outOfScopeLocationSamples` fields when the
+  same literal query is requested in multiple places.
+- The original October 3 observations remain location-unspecified, and remain
+  valid for their historical panel. Do not retroactively attribute a
+  geographic search setting to those records.
+
+The [Northland AI Visibility Assurance query set](content/query-sets/northland-ai-visibility-qa.json)
+is **private mock-client QA**, downstream of the existing
+[Causeway offer/launch gate](https://github.com/causeway-services/public-services-section/issues/6).
+It includes Duluth MN, Duluth GA contamination controls, Superior WI,
+Two Harbors MN, and repeated `near me` requests across locations. It makes
+no claim that Causeway currently sells this service, has a local storefront,
+was observed in an answer, or can service an arbitrary surrounding town.
+
+Compile deterministic **observation requests only** (no provider calls):
+
+```sh
+node src/query-panel.mjs content/query-sets/northland-ai-visibility-qa.json \
+  --surface "Bing Search" --runs 2
+```
+
+Use the existing recorder and summary to analyze independently witnessed
+responses after the test-location, provider mode and source are verified.
+Keep real search responses, publisher release receipts and paying-customer
+outcomes distinct. A query plan cannot satisfy any of those receiving gates.
+
 ## Agentics, artificial intelligence, mathematics: research / technology / practice
 
 The October 20, 2026 research priority is discoverability for **actual**

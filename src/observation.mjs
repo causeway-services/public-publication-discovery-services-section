@@ -1,3 +1,5 @@
+import { checkedQueryLocation } from "./location-context.mjs";
+
 const ENTITY = new Set(["exact","ambiguous","wrong-entity","missing","unknown"]);
 const PROMINENCE = new Set(["primary","prominent","present","incidental","absent","unknown"]);
 const FACTUALITY = new Set(["accurate","partly-accurate","materially-wrong","not-applicable","unknown"]);
@@ -15,6 +17,10 @@ export function observationViolations(value) {
     if (!string(value[key])) errors.push(`${key} must be a non-empty string`);
   }
   if (!iso(value.observedAt)) errors.push("observedAt must be an ISO/date-time parseable string");
+  if (string(value.query)) {
+    try { checkedQueryLocation(value.query, value.locationContext); }
+    catch (error) { errors.push(error.message); }
+  }
   if (!ENTITY.has(value.entityResolution)) errors.push("entityResolution is invalid");
   // External answer surfaces rarely expose the model's actual retrieval.
   // Preserve an explicit unknown rather than inferring retrieval from citation.

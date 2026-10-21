@@ -1,0 +1,183 @@
+{
+  "publication": "causeway-ai-visibility-assurance",
+  "version": 1,
+  "queries": [
+    {
+      "query": "Causeway Services AI Visibility Assurance",
+      "intent": "navigational",
+      "topic": "product-identity",
+      "role": "branded",
+      "expected": "Identify the real Causeway project and only public offerings that have passed the launch gate; no invented public checkout or storefront."
+    },
+    {
+      "query": "GEO services in Duluth MN",
+      "intent": "commercial",
+      "topic": "local-market",
+      "role": "unbranded",
+      "expected": "Report actual relevant providers and sources, without presuming the incubating Causeway service is available.",
+      "locationContext": {
+        "place": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressRegion": "US-MN",
+            "addressLocality": "Duluth"
+          }
+        },
+        "mechanism": "query-text"
+      }
+    },
+    {
+      "query": "GEO services in Duluth GA",
+      "intent": "commercial",
+      "topic": "location-disambiguation",
+      "role": "control",
+      "expected": "Resolve Duluth Georgia independently; do not substitute Duluth Minnesota businesses or assume shared service areas.",
+      "locationContext": {
+        "place": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressRegion": "US-GA",
+            "addressLocality": "Duluth"
+          }
+        },
+        "mechanism": "query-text"
+      }
+    },
+    {
+      "query": "SEO audit for Superior WI small business",
+      "intent": "commercial",
+      "topic": "twin-ports",
+      "role": "unbranded",
+      "expected": "Discover verifiable firms serving Superior Wisconsin; do not infer cross-border coverage from a Duluth address.",
+      "locationContext": {
+        "place": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressRegion": "US-WI",
+            "addressLocality": "Superior"
+          }
+        },
+        "mechanism": "query-text"
+      }
+    },
+    {
+      "query": "SEO audit for Two Harbors MN small business",
+      "intent": "commercial",
+      "topic": "north-shore",
+      "role": "unbranded",
+      "expected": "Discover only verified providers and actual coverage of Two Harbors, not invented location pages.",
+      "locationContext": {
+        "place": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressRegion": "US-MN",
+            "addressLocality": "Two Harbors"
+          }
+        },
+        "mechanism": "query-text"
+      }
+    },
+    {
+      "query": "SEO audit near me",
+      "intent": "commercial",
+      "topic": "local-intent",
+      "role": "unbranded",
+      "expected": "Use Duluth Minnesota only if a real provider setting was applied and independently evidenced; otherwise record no local observation.",
+      "locationContext": {
+        "place": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressRegion": "US-MN",
+            "addressLocality": "Duluth"
+          }
+        },
+        "mechanism": "provider-setting"
+      }
+    },
+    {
+      "query": "SEO audit near me",
+      "intent": "commercial",
+      "topic": "local-intent",
+      "role": "control",
+      "expected": "Use Duluth Georgia only if a real provider setting was applied and independently evidenced; avoid cross-location pooling.",
+      "locationContext": {
+        "place": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressRegion": "US-GA",
+            "addressLocality": "Duluth"
+          }
+        },
+        "mechanism": "provider-setting"
+      }
+    },
+    {
+      "query": "AI search consultant Duluth MN",
+      "intent": "commercial",
+      "topic": "local-market",
+      "role": "unbranded",
+      "expected": "Test whether independent providers offer verifiable AI-search audit services in Duluth Minnesota.",
+      "locationContext": {
+        "place": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressRegion": "US-MN",
+            "addressLocality": "Duluth"
+          }
+        },
+        "mechanism": "query-text"
+      }
+    },
+    {
+      "query": "How to choose a GEO consultant in Duluth MN?",
+      "intent": "informational",
+      "topic": "buyer-decision",
+      "role": "unbranded",
+      "expected": "Compare evidence, service boundaries, citations and pricing transparency without a ranking promise.",
+      "locationContext": {
+        "place": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US",
+            "addressRegion": "US-MN",
+            "addressLocality": "Duluth"
+          }
+        },
+        "mechanism": "query-text"
+      }
+    }
+  ],
+  "study": {
+    "id": "northland-private-ai-visibility-assurance-2026-10-21",
+    "phase": "private-mock-client-qa",
+    "ownerWork": "https://github.com/causeway-services/public-services-section/issues/6",
+    "aim": "Test cross-place disambiguation, geo-qualified local buyer intent and actionable lowest-cost diagnosis without pretending Causeway is a launched merchant.",
+    "preconditions": [
+      "No simulated provider setting is counted as a real answer observation.",
+      "Near-me queries require genuinely applied and evidenced provider geography; otherwise leave them unobserved.",
+      "Locality plus ISO subdivision in explicit-query samples does not prove a provider's service area.",
+      "Do not use this query panel to solicit external customers or enable the disabled payment link."
+    ],
+    "comparison": "Within-surface comparable real samples; hold exact query, query location, surface mode and locale constant for any before/after comparison. Georgia is a geographic contamination control, not a market to solicit.",
+    "evidenceSources": [
+      "https://github.com/causeway-services/publication-discovery-services-section",
+      "https://github.com/causeway-services/public-services-section/issues/6",
+      "https://developers.google.com/search/docs/appearance/ai-features"
+    ]
+  }
+}

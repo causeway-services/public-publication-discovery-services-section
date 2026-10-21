@@ -2,6 +2,7 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
+import { checkedQueryLocation, locationContextKey } from "./location-context.mjs";
 
 const INTENTS = new Set(["navigational", "informational", "comparative", "commercial", "scholarly", "technical"]);
 const ROLES = new Set(["branded", "unbranded", "control"]);
@@ -37,15 +38,18 @@ export function compileQueryPanel(panel, { surfaces, locale = "en-US", runs = 1 
         (entry.role !== undefined && !ROLES.has(entry.role))) {
       throw new TypeError("queries[" + index + "] requires query, valid intent, topic, expectation and valid optional role");
     }
+    const locationContext = checkedQueryLocation(entry.query, entry.locationContext);
     const normalized = entry.query.trim().replace(/\s+/gu, " ").toLocaleLowerCase("en");
-    if (seen.has(normalized)) throw new TypeError("duplicate query: " + entry.query);
-    seen.add(normalized);
+    const identity = JSON.stringify([normalized, locationContextKey(locationContext)]);
+    if (seen.has(identity)) throw new TypeError("duplicate query and location: " + entry.query);
+    seen.add(identity);
     return Object.freeze({
       query: entry.query,
       intent: entry.intent,
       topic: entry.topic,
       role: entry.role ?? "branded",
       expected: entry.expected,
+      ...(locationContext ? { locationContext } : {}),
     });
   });
 
@@ -68,6 +72,7 @@ export function compileQueryPanel(panel, { surfaces, locale = "en-US", runs = 1 
           topic: query.topic,
           role: query.role,
           expected: query.expected,
+          ...(query.locationContext ? { locationContext: query.locationContext } : {}),
         }));
       }
     }
