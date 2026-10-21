@@ -6,6 +6,7 @@ import { fileURLToPath } from "node:url";
 import { auditEstate } from "./audit-estate.mjs";
 import { assertObservation } from "./observation.mjs";
 import { compileQueryPanel } from "./query-panel.mjs";
+import { locationContextKey } from "./location-context.mjs";
 import { summarizeObservedPanel } from "./analyze-observations.mjs";
 import { projectPublicEntityGraph } from "./project-public-entity-graph.mjs";
 
@@ -34,6 +35,15 @@ const patch=readJson("content/patches/561-group-corporate-discovery-bridge.json"
 const querySet=readJson("content/query-sets/561-group.json");
 const panelRequests=compileQueryPanel(querySet,{surfaces:["Bing search","ChatGPT Search"],runs:2});
 const topicSet=new Set(panelRequests.map((request)=>request.topic));
+const northland=readJson("content/query-sets/northland-ai-visibility-qa.json");
+const northlandRequests=compileQueryPanel(northland,{surfaces:["Bing Search"],runs:1});
+const nearMeRequests=northlandRequests.filter((request)=>request.query==="SEO audit near me");
+if (northland.study?.phase!=="private-mock-client-qa" || northlandRequests.length<8 || nearMeRequests.length!==2 ||
+    new Set(nearMeRequests.map((request)=>locationContextKey(request.locationContext))).size!==2 ||
+    !northlandRequests.some((request)=>request.locationContext?.place.address.addressRegion==="US-WI") ||
+    !northlandRequests.some((request)=>request.locationContext?.place.address.addressRegion==="US-GA")) {
+  throw new Error("Northland GEO study must preserve private QA and cross-place controls");
+}
 if (![ "agentics", "artificial-intelligence", "mathematics" ].every(topic=>topicSet.has(topic))) throw new Error("three scientific search domains must be represented");
 if (!panelRequests.some((request)=>request.role==="control") || !panelRequests.some((request)=>request.role==="unbranded")) throw new Error("scientific search panel missing negative or unbranded controls");
 if (panelRequests.some((request)=>"cited" in request || "retrieved" in request || "factuality" in request)) throw new Error("query plan must never fabricate search outcomes");
@@ -56,6 +66,7 @@ process.stdout.write(JSON.stringify({
   baselineObservations:observationCount,
   corporateBridge:patch.status,
   scientificQueryRequests:panelRequests.length,
+  northlandPrivateQueryRequests:northlandRequests.length,
   historicalCorporateObservations:historicalSummary.totalObserved,
   scientificTopics:[...topicSet].filter((topic)=>["agentics","artificial-intelligence","mathematics"].includes(topic))
 },null,2)+"\n");
