@@ -64,7 +64,7 @@ if (recentCount!==3 || recentGroup.totalObserved!==2 || recentGroup.observedDist
 
 const northlandSampleFile="content/observations/2026-10-21-northland-public-search.jsonl";
 const northlandSampleCount=verifyJsonl(northlandSampleFile,assertObservation);
-const northlandRows=readFileSync(resolve(ROOT,northlandSampleFile),"utf8").trim().split(/\\r?\\n/u).map(line=>JSON.parse(line));
+const northlandRows=readFileSync(resolve(ROOT,northlandSampleFile),"utf8").trim().split(/\r?\n/u).map(line=>JSON.parse(line));
 const northlandSummary=summarizeObservedPanel(northland,northlandRows);
 if(northlandSampleCount!==2 || northlandSummary.totalObserved!==2 || northlandSummary.observedDistinctQueries!==2 ||
     northlandSummary.outOfScopeLocationSamples!==0 || northlandSummary.missingQueryContexts.length!==northland.queries.length-2 ||
