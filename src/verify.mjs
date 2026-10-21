@@ -62,6 +62,20 @@ if (recentCount!==3 || recentGroup.totalObserved!==2 || recentGroup.observedDist
   throw new Error("October 21 sampled branded-search evidence lost or falsely elevated into answer-engine metrics");
 }
 
+const northlandSampleFile="content/observations/2026-10-21-northland-public-search.jsonl";
+const northlandSampleCount=verifyJsonl(northlandSampleFile,assertObservation);
+const northlandRows=readFileSync(resolve(ROOT,northlandSampleFile),"utf8").trim().split(/\\r?\\n/u).map(line=>JSON.parse(line));
+const northlandSummary=summarizeObservedPanel(northland,northlandRows);
+if(northlandSampleCount!==2 || northlandSummary.totalObserved!==2 || northlandSummary.observedDistinctQueries!==2 ||
+    northlandSummary.outOfScopeLocationSamples!==0 || northlandSummary.missingQueryContexts.length!==northland.queries.length-2 ||
+    northlandRows.some(row=>row.retrieved!==null || row.cited!==false || row.mentioned!==false ||
+      row.locale!=="und" || row.surface!=="ChatGPT Web public search (fast)" ||
+      row.locationContext?.place.address.addressRegion!=="US-MN" ||
+      row.locationContext?.mechanism!=="query-text" ||
+      !row.evidence?.some(item=>item.kind==="url"))) {
+  throw new Error("Duluth GEO public-search samples must retain real source, location method and missing-query distinctions");
+}
+
 
 if (estate.publicationCount < 4) throw new Error("publication inventory unexpectedly shrank below founding baseline");
 if (projected["@graph"].length < 2) throw new Error("public entity projection unexpectedly empty");
@@ -79,6 +93,8 @@ process.stdout.write(JSON.stringify({
   corporateBridge:patch.status,
   scientificQueryRequests:panelRequests.length,
   northlandPrivateQueryRequests:northlandRequests.length,
+  witnessedNorthlandPublicSearchSamples:northlandSampleCount,
+  observedNorthlandPrivateQaQueries:northlandSummary.observedDistinctQueries,
   historicalCorporateObservations:historicalSummary.totalObserved,
   witnessedOctober21SearchSamples:recentCount,
   observedOctober21CorporateQueries:recentGroup.observedDistinctQueries,
