@@ -1,6 +1,6 @@
 {
   "id": "publication-discovery-telemetry-adapters-v1",
-  "asOf": "2026-10-03",
+  "asOf": "2026-10-20",
   "google": {
     "provider": "Google Search Console",
     "status": "normalizer-implemented",
@@ -45,6 +45,29 @@
       "grounding queries are aggregate grouped phrases",
       "citation counts are not rankings",
       "AI Performance is aggregated and sampled"
-    ]
+    ],
+    "topicsPortfolio": {
+      "asOf": "2026-10-13",
+      "phase": "public-beta; site must have sufficient presence to see feature",
+      "source": "https://blogs.bing.com/webmaster/2026/10/introducing-topics-portfolio-beta-in-ai-performance/",
+      "evidenceKind": "first-party, site-scoped directional aggregated webmaster observation",
+      "measures": [
+        "topic",
+        "topic size (approximate ecosystem citations)",
+        "sites cited (approximate)",
+        "distinct queries (approximate)",
+        "own citations by topic",
+        "top opportunity queries with citation ranges"
+      ],
+      "cannotInfer": [
+        "published page rankings",
+        "exact topic-level citation totals",
+        "observed AI internal retrieval",
+        "unobserved queries have zero demand",
+        "causal effect of content changes",
+        "absence of appearance on sites with insufficient data"
+      ],
+      "importRule": "Preserve screenshots/CSV provider exports and topic labels as provider-specific observations. Do not force these aggregates into individual per-query cited booleans."
+    }
   }
 }
