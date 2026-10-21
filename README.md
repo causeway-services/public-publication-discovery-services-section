@@ -117,6 +117,33 @@ responses after the test-location, provider mode and source are verified.
 Keep real search responses, publisher release receipts and paying-customer
 outcomes distinct. A query plan cannot satisfy any of those receiving gates.
 
+## 2026-10-21: witnessed Northland query-text samples
+
+The [Northland private-QA observation ledger](content/observations/2026-10-21-northland-public-search.jsonl)
+now contains **two** exact public Web-search-result samples:
+`GEO services in Duluth MN` and `AI search consultant Duluth MN`.
+These are not nine observed results or a completed mock-client experiment.
+The records retain the original panel's typed
+`Place/PostalAddress` and `mechanism: query-text`; no search provider
+geolocation setting, account locale, real booking, or customer conversion was
+witnessed. Both records use `retrieved: null` and are excluded from
+AI-answer-citation interpretation.
+
+The first sample demonstrates an operational **lexical ambiguity**:
+unqualified `GEO` may surface geographically oriented GIS/surveying work
+alongside generative-engine optimization. Both searches also surfaced agency
+landing pages asserting Duluth coverage, which is not evidence of a real
+local office or completed local project. The Causeway offer remains **private
+mock-client QA**, not a currently promoted merchant; do not build keyword
+doorway pages in response.
+
+The same original analyzer reports two observed distinct Duluth questions,
+seven missing question/location combinations and zero witnessed answer-engine
+retrievals. Missing is **not** a measured failure. Before any commercial
+decision, independently witness relevant provider answer/search surfaces,
+local provider identity, customer need and the existing mock-client acceptance
+gate at [Causeway original Work #6](https://github.com/causeway-services/public-services-section/issues/6).
+
 ## Agentics, artificial intelligence, mathematics: research / technology / practice
 
 The October 20, 2026 research priority is discoverability for **actual**
