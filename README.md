@@ -68,3 +68,106 @@ node src/audit-publication.mjs content/publications/koios-news.json
 
 The audit reports layer-by-layer residuals and never compresses them into a
 proprietary score.
+
+
+## Agentics, artificial intelligence, mathematics: research / technology / practice
+
+The October 20, 2026 research priority is discoverability for **actual**
+agentics, artificial-intelligence and mathematical work. Keep the original
+seven-layer publication-discovery contract and observation ledger as authority:
+this is an operating experiment on the original system, not a separate GEO
+scanner, an invented publication platform or a ranking-success claim.
+
+### Science: registered questions and falsifiable contrasts
+
+The [561 Group query set](content/query-sets/561-group.json) contains 16
+versioned questions: five previous corporate questions and 11 new agentics,
+AI, mathematics and unrelated-entity probes. Preserve **branded**, **unbranded**
+and **control** roles. The unit of observation is one real response to an
+exact query on a named engine/surface at a recorded locale and time.
+
+Test findability (correct canonical entity, actual source), attribution
+(accurate author/institution/artifact/claim status), citation/retrieval
+(distinct, separately witnessed), and usefulness (independent outside
+reader can follow the actual publication and perform its task). Generic
+scientific questions are not obligated to cite the Group. Unrelated numeric
+entities must not be confused with the Group. Do not claim causal effects
+from a few selected answer samples.
+
+### Engineering: real repeatable query and observation operations
+
+Produce requests without creating fictional results:
+
+    npm run study:queries -- --surface "Bing Search" --surface "ChatGPT Search" --runs 2
+
+With the current source this emits 64 JSONL observation **requests**, not
+provider requests or observed answers. It performs no network access. For a
+real manually witnessed public search or authorized answer experiment, record
+the actual response date/time, named provider/surface mode, locale, exact
+query, canonical entity, response/citation URL, and external evidence.
+Distinguish retrieved (null if unknowable), mentioned, cited, factuality,
+freshness and observed external referral/conversion. Feed one authentic JSON
+observation to the existing recorder on stdin:
+
+    node src/record-observation.mjs --out content/observations/YOUR-DATED-OBSERVATIONS.jsonl
+
+Generate a descriptive summary from real ledger observations:
+
+    npm run study:summary -- content/query-sets/561-group.json content/observations/2026-10-03-public-search-baseline.jsonl
+
+This historical ledger supplies only **one** existing 561 Group observation;
+the remaining 15 questions are **missing measurements**, not zero-success
+responses. The analyzer reports each topic / role / provider / mode / locale
+separately, and never invents ranking positions, GEO scores, retrieval
+events, or citations. Before/after comparisons need a stable versioned
+panel, comparable surfaces, dates, locales and declared sampling limits;
+repeated answers are correlated and descriptive fractions are not proof of
+population rates or causal attribution.
+
+Google Search Console conventional search-performance metrics and Bing
+Webmaster AI Performance topic/citation aggregates are **different kinds**
+of telemetry from individual answer observations. Retain provider export
+provenance and never recode approximate topical aggregates as personally
+observed individual Boolean citations.
+
+### Operations: improve the original producer through a received result
+
+Use observed discovery defects to select an owned original public producer:
+Lenticule Science accepts mathematical works and establishes scientific
+status; Red Cup Engineering improves reusable semantic scholarly/article
+publication machinery; Coesite / Causeway coordinate actual authorized
+publication, web estate, provider access and independent public receiving.
+
+The corporate source already has [merged original homepage work](https://github.com/561-group/561.group/pull/18),
+but [apex issue #17](https://github.com/561-group/561.group/issues/17)
+still lacks the installed full Play/PNPM production build, authorized
+Cloudflare release, public readback and reader reception. Do not flip this
+repository's 2026-10-03 manifest crawl flags on source merge alone or
+publish a fabricated smaller stand-in. Reuse the actual
+[Science-publication custody research](https://github.com/561-group/bare-cedar-fog/issues/255)
+and [Public Web Actor receiving requirements](https://github.com/causeway-services/public-web-services-section/issues/14).
+An accessible public garden carrier, an accepted scientific paper, and
+a licensed reusable scientific artifact are distinct conditions. Affiliated
+personal properties remain observation-only without their owner's
+independent authorization.
+
+### Industry reference evidence and qualifying boundaries
+
+Google [AI features guidance](https://developers.google.com/search/docs/appearance/ai-features)
+requires conventional crawlable, helpful, reliable, linked and accurately
+structured content, not special AI markup or AI-only files.
+For actually accepted mathematical papers, use
+[Google Scholar inclusion guidance](https://scholar.google.com/intl/en/scholar/inclusion.html)
+for crawlable HTML/PDF, visible author abstracts and bibliographic metadata.
+[FAIR Signposting](https://signposting.org/FAIR/) applies when real
+author/version/artifact/license relationships are available from the original
+research release. Never invent DOI, license grant, review status or proof.
+[Bing Topics Portfolio beta (October 13, 2026)](https://blogs.bing.com/webmaster/2026/10/introducing-topics-portfolio-beta-in-ai-performance/)
+supplies approximate, AI-classified topic opportunities to eligible sites:
+directional planning data, not an exact exposure ledger.
+
+**Received success** requires: source-authorized production fix, native
+tests, original release/install evidence, independent public readback,
+and measured corrected source findability or improved real reader task.
+A query plan, test pass, source merge, public deployment and user-visible
+SEO/GEO effect are five different statuses.
