@@ -6,6 +6,7 @@ import { fileURLToPath } from "node:url";
 import { auditEstate } from "./audit-estate.mjs";
 import { assertObservation } from "./observation.mjs";
 import { compileQueryPanel } from "./query-panel.mjs";
+import { summarizeObservedPanel } from "./analyze-observations.mjs";
 import { projectPublicEntityGraph } from "./project-public-entity-graph.mjs";
 
 const HERE=dirname(fileURLToPath(import.meta.url));
@@ -36,6 +37,9 @@ const topicSet=new Set(panelRequests.map((request)=>request.topic));
 if (![ "agentics", "artificial-intelligence", "mathematics" ].every(topic=>topicSet.has(topic))) throw new Error("three scientific search domains must be represented");
 if (!panelRequests.some((request)=>request.role==="control") || !panelRequests.some((request)=>request.role==="unbranded")) throw new Error("scientific search panel missing negative or unbranded controls");
 if (panelRequests.some((request)=>"cited" in request || "retrieved" in request || "factuality" in request)) throw new Error("query plan must never fabricate search outcomes");
+const historicalRows=readFileSync(resolve(ROOT,"content/observations/2026-10-03-public-search-baseline.jsonl"),"utf8").trim().split(/\r?\n/u).map((line)=>JSON.parse(line));
+const historicalSummary=summarizeObservedPanel(querySet,historicalRows);
+if (historicalSummary.totalObserved!==1 || historicalSummary.observedDistinctQueries!==1) throw new Error("dated historical search observation was lost or fabricated");
 
 if (estate.publicationCount < 4) throw new Error("publication inventory unexpectedly shrank below founding baseline");
 if (projected["@graph"].length < 2) throw new Error("public entity projection unexpectedly empty");
@@ -52,5 +56,6 @@ process.stdout.write(JSON.stringify({
   baselineObservations:observationCount,
   corporateBridge:patch.status,
   scientificQueryRequests:panelRequests.length,
+  historicalCorporateObservations:historicalSummary.totalObserved,
   scientificTopics:[...topicSet].filter((topic)=>["agentics","artificial-intelligence","mathematics"].includes(topic))
 },null,2)+"\n");
