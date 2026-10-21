@@ -58,10 +58,18 @@
     "interpretation": "Entity-disambiguation and crawl/semantic remediation are higher priority than creating GEO-specific content."
   },
   "nextActions": [
-    "ship canonical URL, robots.txt, sitemap.xml, Organization JSON-LD, clear visible identity copy, and cross-links to canonical 561 publications and services",
-    "verify the domain in Google Search Console and Bing Webmaster Tools",
-    "establish a group entity graph defining relationships among 561 Group, Koios.News, Causeway, public products, and agent/persona publications",
-    "publish durable pages for actual public services/products rather than leaving the corporate site as a one-paragraph shell",
-    "record brand/entity and service-query observations after each meaningful release"
-  ]
+    "qualify the full original Play/PNPM source installation for the already merged 561.group four-page renderer, then authorized Cloudflare release and independent external readback (original site issue #17); do not deploy a smaller stand-in",
+    "only after live readback, independently record current canonical URLs, robots.txt, sitemap XML/plain text parity, Organization/WebSite graph and page-specific topical links; update manifest capabilities to observed status",
+    "execute the source-owned 16-query agentics/artificial-intelligence/mathematics branded, unbranded and control panel across named search/answer surfaces; append only witnessed results using original observation ledger",
+    "qualify ScholarlyArticle/Google Scholar and FAIR Signposting exposure at existing Science-owned accepted-release surfaces, with author rights, claim statuses and paper/proof/source artifact links",
+    "ingest first-party Google Search Console traditional search data and Bing AI Performance / Topics Portfolio export separately; preserve sampling limits and uncertainty",
+    "compare before/after results against independent outside evidence, route issues to original owning production sources and recheck accepted public reader tasks"
+  ],
+  "sourceStatus": {
+    "asOf": "2026-10-20",
+    "upstream": "https://github.com/561-group/561.group/issues/17",
+    "mergedSource": "https://github.com/561-group/561.group/pull/18",
+    "qualification": "site-renderer source integrated; original PNPM/Play workspace, full native build, Cloudflare publication, and independent user/agent acceptance unverified",
+    "rule": "Do not flip capabilities based on committed source; update after actual canonical live readback/provider evidence."
+  }
 }

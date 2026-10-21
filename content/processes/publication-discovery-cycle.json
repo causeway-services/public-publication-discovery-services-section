@@ -7,33 +7,44 @@
     "read each property's authority boundary and publication-discovery manifest",
     "ingest available first-party crawl/index/search/AI citation/referral/conversion telemetry",
     "run bounded representative query sets for entity, topic, navigational, informational, comparative, and commercial intents where appropriate",
-    "record observations separately for entity resolution, retrieval, mention, citation, prominence, factuality, freshness, referral, and conversion"
+    "record observations separately for entity resolution, retrieval, mention, citation, prominence, factuality, freshness, referral, and conversion",
+    "select a versioned three-domain scientific query panel with branded, unbranded and unrelated entity controls; declare locales, surfaces, repetitions, snapshots and windows before measurement"
   ],
   "analyze": [
     "distinguish publication defects from measurement gaps and platform variance",
     "identify entity collisions, orphaned authority, missing canonical relationships, thin topic coverage, stale facts, unsupported claims, and correction drift",
     "compare observed answer/citation behavior with the publication's own canonical facts and audience intent",
-    "prefer existing strong first-party artifacts over manufacturing new pages"
+    "prefer existing strong first-party artifacts over manufacturing new pages",
+    "retain separate within-surface evidence for topical relevance, target-entity confusion, citation URL correctness, demonstrated claim accuracy and scholarly release-status misrepresentation; absence from a response is not a demonstrated retrieval failure"
   ],
   "plan": [
     "rank changes by end-user consequence, cross-property reuse, evidence strength, and cost",
     "route each remediation to the owning publication or shared publishing primitive",
     "choose the smallest change that can falsifiably improve the broken layer",
-    "never plan a GEO-only rewrite when ordinary technical/content/evidence repair addresses the cause"
+    "never plan a GEO-only rewrite when ordinary technical/content/evidence repair addresses the cause",
+    "treat accepted mathematical proof/publication affordances differently from agentics software documentation and AI research explainers; select the current canonical producer and public receiver for each type"
   ],
   "execute": [
     "make authorized low-risk fixes directly in the owning repository",
     "add or repair canonical identity, structured data, sitemaps, feeds, topic relations, internal links, correction propagation, and crawler access where evidenced",
     "open/update the receiving pull request and carry it through checks/review as far as authority permits",
-    "for blocked writes, update the existing blocker with an exact patch and acceptance test rather than spawning duplicate diagnosis"
+    "for blocked writes, update the existing blocker with an exact patch and acceptance test rather than spawning duplicate diagnosis",
+    "invoke the original query panel compiler only to emit observation requests; write actual source-backed observations to the existing ledger, and correct original authored metadata or accepted paper pages through competent owners"
   ],
   "knowledge": [
     "append dated observations and before/after query evidence",
     "update property manifests only after a capability is actually observed",
     "retain failed experiments and platform-specific findings",
     "promote reusable successful fixes into shared publishing infrastructure",
-    "feed proven techniques and measured economics downstream to Causeway AI Visibility Assurance"
+    "feed proven techniques and measured economics downstream to Causeway AI Visibility Assurance",
+    "compare versioned pre/post query observations with stable controls, unchanged time windows where possible, platform/locale stratification and disclosed uncertainty; never count proposed queries as observed responses"
   ],
   "publicationChangeTrigger": "Any new publication, material redesign, domain/canonical change, major topic expansion, correction/retraction, product/service launch, or sustained answer/citation shift reopens the relevant layers.",
-  "success": "The media estate becomes more accurately discoverable and citeable while preserving publication integrity; success is evidenced layer-by-layer, never by a single GEO score."
+  "success": "The media estate becomes more accurately discoverable and citeable while preserving publication integrity; success is evidenced layer-by-layer, never by a single GEO score.",
+  "consumerProtocol": {
+    "science": "Lenticule distinguishes conjectures, accepted paper versions, Lean/kernel proofs and reproducible datasets; no scholarly markup that fabricates status, peer review or DOI.",
+    "engineering": "Red Cup implements and verifies canonical HTML, stable versions, Scholar tags, proper structured data, Signposting links and sitemaps in the current original renderer rather than a GEO-only parallel CMS.",
+    "operations": "Coesite and Causeway reconcile discovered defects and measured gains with provider deployments, publisher rights, Search Console/Bing Webmaster evidence and independent receiving.",
+    "acceptance": "One native authored fix linked to an observed problem, qualifying tests and original deployment readback, then independent source-bound search/answer or user task evidence. Source-only improvements are not indexed visibility."
+  }
 }
