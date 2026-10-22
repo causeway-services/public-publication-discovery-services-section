@@ -355,6 +355,34 @@ the existing 561 Group corpus, zero-observation semantics and wrong-entity
 refusals. This producer update is not proof that Enterprise ASSIST is deployed
 or that any search ranking, mention rate or customer conversion improved.
 
+### Public-only data and disclosure boundary
+
+An external x402 caller is not automatically a custodian of private search-console
+exports, audience analytics, internal work, associate advertising screenshots or
+an employee's commentary. Before an x402 payment is requested, the producer
+rejects unrecognized extra fields. This is deliberately stricter than
+Publication Discovery's internal observation ledger, which can contain
+internal factuality notes, referral readings and licensed provider evidence.
+
+The paid computation admits only a **sanitized public** manifest
+(`id`, canonical publisher/entity identifiers, the seven-layer boolean/unknown
+capability declarations and optionally public site URLs), a query panel with
+bounded public prompts and verified location shapes, and source-constrained
+public URL/citation observations. Free-form private `notes`, `study`,
+`sourceStatus`, `nextActions`, conversion totals and unknown keys **must not**
+cross that boundary. The validation rejects source/citation URLs with embedded
+credentials, sensitive token query parameters, fragments or local/non-public
+hosts. This is an input-surface reduction, not proof that a chosen public link
+was independently verified or that all possible personal information is
+automatically redacted.
+
+Public-facing clients should provide a deliberate data-minimization step;
+the original internal source remains intact and separately governed. Neither
+the no-auth ASSIST roster nor the public Market x402 contract may act as a
+private evidence export. All payable operations remain held until the proper
+seller and recipient have independently received their original grants and
+commercial rights.
+
 ## Reusable, bounded x402-visible computation (not yet for sale)
 
 The original producer now exports `@561-group/publication-discovery-services-section/paid-discovery` with two ordinary source-owned Node 22+ functions: `admitPaidDiscoveryReport(body)` and `computePaidDiscoveryReport(body)`. These directly consume the existing seven-layer declared publication audit and the witnessed query panel summarizer. They do **not** create a second scanner, query engine, customer observations, payment rail, free-text inference claim or GEO score.
