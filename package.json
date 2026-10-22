@@ -4,13 +4,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "check": "node --check src/audit-publication.mjs && node --check src/audit-estate.mjs && node --check src/observation.mjs && node --check src/record-observation.mjs && node --check src/import-search-console.mjs && node --check src/project-public-entity-graph.mjs && node --check src/verify.mjs && node --check src/location-context.mjs && node --check src/query-panel.mjs && node --check src/analyze-observations.mjs",
+    "check": "node --check src/audit-publication.mjs && node --check src/audit-estate.mjs && node --check src/observation.mjs && node --check src/record-observation.mjs && node --check src/import-search-console.mjs && node --check src/project-public-entity-graph.mjs && node --check src/verify.mjs && node --check src/location-context.mjs && node --check src/query-panel.mjs && node --check src/analyze-observations.mjs && node --check src/project-assist-discovery.mjs",
     "test": "node --test test/*.test.mjs",
     "audit:estate": "node src/audit-estate.mjs",
     "record:observation": "node src/record-observation.mjs",
     "verify": "node src/verify.mjs && node --test test/*.test.mjs",
     "study:queries": "node src/query-panel.mjs content/query-sets/561-group.json",
-    "study:summary": "node src/analyze-observations.mjs"
+    "study:summary": "node src/analyze-observations.mjs",
+    "assist:discovery": "node src/project-assist-discovery.mjs"
   },
   "repository": {
     "type": "git",
