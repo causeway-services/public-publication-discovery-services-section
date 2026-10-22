@@ -321,18 +321,18 @@ npm run assist:discovery -- \
 ```
 
 
-The \`assist.publication-discovery-reading/v1\` JSON output has:
+The `assist.publication-discovery-reading/v1` JSON output has:
 
-- \`declaredAudit\`: the original seven-layer **source declaration**, not a fresh
+- `declaredAudit`: the original seven-layer **source declaration**, not a fresh
   live crawl or independent proof of indexing;
-- \`observedPanel\`: only witnessed, schema-checked observations, with missing
+- `observedPanel`: only witnessed, schema-checked observations, with missing
   query/location contexts, platforms, unknown retrievals and uncertainty
   preserved by the **existing** observation summarizer;
-- \`verificationQueue\`: verification candidates derived from absent/false
+- `verificationQueue`: verification candidates derived from absent/false
   declarations in the original audit, not automatically authorized fixes;
-- \`originalOwnerNextActions\`: the publisher's original proposed actions,
+- `originalOwnerNextActions`: the publisher's original proposed actions,
   never presented as executed work;
-- \`independentReceiving\`: explicit \`not-assessed\` for site release, live
+- `independentReceiving`: explicit `not-assessed` for site release, live
   crawl, approvals, provider access, campaigns and customer outcomes.
 
 The Group corporate query panel has 16 source-authored questions; the
@@ -350,7 +350,7 @@ CRM records or campaign budgets. Any actual remediation, social publishing,
 paid campaign, or x402 purchase remains behind original owner, customer and
 provider grants. This producer never issues those rights.
 
-Native checks: \`npm run check && npm run verify\`. The added test exercises
+Native checks: `npm run check && npm run verify`. The added test exercises
 the existing 561 Group corpus, zero-observation semantics and wrong-entity
 refusals. This producer update is not proof that Enterprise ASSIST is deployed
 or that any search ranking, mention rate or customer conversion improved.
