@@ -82,7 +82,7 @@ function publicOnlyShape(request) {
           o.citationUrls.length<=20 && o.citationUrls.every(publicUrl)))) ||
       !keysOnly(request.sources,SOURCE_KEYS) ||
       !SOURCE_KEYS.every(key => publicUrl(request.sources[key])))
-    throw new TypeError("x402 discovery requires one bounded public-only manifest, panel, observations and HTTPS sources; private/extra input fields refuse");
+    throw new TypeError("x402 discovery requires one bounded public manifest and public HTTPS evidence (public-only); private/extra fields refuse");
 }
 
 /** Refuse malformed or wrongly classified public-only requests before 402. */
