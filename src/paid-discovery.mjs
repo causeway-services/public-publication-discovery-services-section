@@ -42,6 +42,13 @@ function publicUrl(text) {
   return true;
 }
 
+function publicLocation(value) {
+  if (value === undefined || value === null) return true;
+  return keysOnly(value,["place","mechanism"]) &&
+    keysOnly(value.place,["@type","address"]) &&
+    keysOnly(value.place.address,["@type","addressCountry","addressRegion","addressLocality"]);
+}
+
 /** Reject private/customer-only source fields rather than trusting a label. */
 function publicOnlyShape(request) {
   if(!keysOnly(request,["manifest","panel","observations","sources","dataClassification"]) ||
@@ -62,12 +69,13 @@ function publicOnlyShape(request) {
       request.panel.queries.length>32 ||
       !request.panel.queries.every(q => keysOnly(q,QUESTION_KEYS) &&
         named(q.query,500) && named(q.intent,100) && named(q.topic,100) &&
-        (q.expected===undefined || named(q.expected,700))) ||
+        (q.expected===undefined || named(q.expected,700)) &&
+        publicLocation(q.locationContext)) ||
       !Array.isArray(request.observations) ||
       request.observations.length>128 ||
       !request.observations.every(o => keysOnly(o,OBSERVED_KEYS) &&
         Array.isArray(o.evidence) && o.evidence.length>0 &&
-        o.evidence.length<=20 &&
+        o.evidence.length<=20 && publicLocation(o.locationContext) &&
         o.evidence.every(e=>keysOnly(e,["kind","value"]) &&
           ["url","citation"].includes(e.kind) && publicUrl(e.value)) &&
         (o.citationUrls===undefined || (Array.isArray(o.citationUrls) &&
