@@ -354,3 +354,13 @@ Native checks: `npm run check && npm run verify`. The added test exercises
 the existing 561 Group corpus, zero-observation semantics and wrong-entity
 refusals. This producer update is not proof that Enterprise ASSIST is deployed
 or that any search ranking, mention rate or customer conversion improved.
+
+## Reusable, bounded x402-visible computation (not yet for sale)
+
+The original producer now exports `@561-group/publication-discovery-services-section/paid-discovery` with two ordinary source-owned Node 22+ functions: `admitPaidDiscoveryReport(body)` and `computePaidDiscoveryReport(body)`. These directly consume the existing seven-layer declared publication audit and the witnessed query panel summarizer. They do **not** create a second scanner, query engine, customer observations, payment rail, free-text inference claim or GEO score.
+
+One caller submits `{ dataClassification: "public-only", manifest, panel, observations, sources }`: a public self-supplied publication manifest, a versioned panel of 1–32 questions, 0–128 typed observed answers and three HTTPS reference URLs naming the inputs. The x402-specific admission refuses a body above 64 KiB and refuses screenshot/provider-export/note evidence (only public HTTPS `url` and `citation` evidence are permitted). The original reader still validates query identity, geographic context and distinct provider observation instants. Its readout marks absent observations as missing, caller-provided source claims as **not independently verified**, and actual search/commerce effects as **not assessed**.
+
+The original Networking x402 market can bind those two exports as a validation and compute pair. Any seller tariff, ledger payee, merchant, release, privacy policy, customer order, refund and live x402 transaction remains a **separate** authorized Causeway Market/Coesite operation. This repository still has `private: true` and is **not** evidence of an installed x402 route or service revenue. Source native checks: `npm run check && npm run verify` and `npm run test:paid-discovery`. Do not publish a paid listing until the existing Market catalog, package forest and provider receiving have been independently verified.
+
+An internal MetroPlat office and Enterprise ASSIST may call the very same pure producer under their original authenticated source/custody grants. External customers may pay a merchant for this bounded algorithm only after the seller separately receives truthful input/output schema, tariff, pricing and refund conditions. Private Search Console exports and associate-submitted advertisements belong to different consented services, never this public computation.
