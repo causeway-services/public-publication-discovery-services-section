@@ -299,3 +299,58 @@ original Koios publication owner should check independent GSC/Bing index
 data and search-engine-specific samples before selecting a canonical
 identity remediation. Neither estate deserves manufactured AI-only markup
 or uncontrolled SEO landing pages.
+
+
+## ASSIST: source-qualified discovery reading (read-only)
+
+The existing Publication Discovery owner can project **its own** declarative
+seven-layer manifest audit and recorded search/answer observations into a
+machine-readable reading for the proposed
+[Enterprise ASSIST](https://github.com/red-cup-engineering/assist/issues/8).
+This is a cross-service **evidence handoff**, not a new GEO scanner, an ASSIST
+app runtime, a customer database, or authority to change public content.
+
+Run it with the actual original corporate manifest, panel, and observation
+ledger:
+
+```sh
+npm run assist:discovery -- \
+  content/publications/561-group.json \
+  content/query-sets/561-group.json \
+  content/observations/2026-10-03-public-search-baseline.jsonl
+```
+
+
+The `assist.publication-discovery-reading/v1` JSON output has:
+
+- `declaredAudit`: the original seven-layer **source declaration**, not a fresh
+  live crawl or independent proof of indexing;
+- `observedPanel`: only witnessed, schema-checked observations, with missing
+  query/location contexts, platforms, unknown retrievals and uncertainty
+  preserved by the **existing** observation summarizer;
+- `verificationQueue`: verification candidates derived from absent/false
+  declarations in the original audit, not automatically authorized fixes;
+- `originalOwnerNextActions`: the publisher's original proposed actions,
+  never presented as executed work;
+- `independentReceiving`: explicit `not-assessed` for site release, live
+  crawl, approvals, provider access, campaigns and customer outcomes.
+
+The Group corporate query panel has 16 source-authored questions; the
+historical 2026-10-03 ledger covers only one. The other 15 remain missing
+observations. Run later baselines with the correct real observed ledger,
+not fabricated answers or search-engine metrics. The output never equates a
+citation with a witnessed model retrieval, a customer referral or a sale.
+
+**ASSIST receiving gate.** The host or authorized client must explicitly
+read this projection from the original Publication Discovery provider, qualify
+the tenant/publication source and connect it to the original approved Work,
+publisher/Actor and independent public receiving. A public roster page MUST
+NOT expose a customer's private query observations, provider-account exports,
+CRM records or campaign budgets. Any actual remediation, social publishing,
+paid campaign, or x402 purchase remains behind original owner, customer and
+provider grants. This producer never issues those rights.
+
+Native checks: `npm run check && npm run verify`. The added test exercises
+the existing 561 Group corpus, zero-observation semantics and wrong-entity
+refusals. This producer update is not proof that Enterprise ASSIST is deployed
+or that any search ranking, mention rate or customer conversion improved.
