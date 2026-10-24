@@ -1,6 +1,6 @@
 # Publication Discovery Services Section
 
-> Code custody: this section's executable code lives in `red-cup-engineering/public-publication-discovery-services-section`. Commands below run it against this checkout: set `PUBLICATION_DISCOVERY_ROOT` to this repository's root (default: the current directory).
+> Code custody: this section's executable code lives in `red-cup-engineering/publication-discovery-engineering-services-section`. Commands below run it against this checkout: set `PUBLICATION_DISCOVERY_ROOT` to this repository's root (default: the current directory).
 
 <!-- 561-group-standards:badges:start -->
 [![Causeway Services](https://img.shields.io/badge/561%20Group-Causeway%20Services-115e69)](https://github.com/causeway-services)
@@ -72,7 +72,7 @@ in a second code-only capability registry.
 Run the local manifest audit with:
 
 ```sh
-node red-cup-engineering/public-publication-discovery-services-section/src/audit-publication.mjs content/publications/koios-news.json
+node red-cup-engineering/publication-discovery-engineering-services-section/src/audit-publication.mjs content/publications/koios-news.json
 ```
 
 The audit reports layer-by-layer residuals and never compresses them into a
@@ -117,7 +117,7 @@ was observed in an answer, or can service an arbitrary surrounding town.
 Compile deterministic **observation requests only** (no provider calls):
 
 ```sh
-node red-cup-engineering/public-publication-discovery-services-section/src/query-panel.mjs content/query-sets/northland-ai-visibility-qa.json \
+node red-cup-engineering/publication-discovery-engineering-services-section/src/query-panel.mjs content/query-sets/northland-ai-visibility-qa.json \
   --surface "Bing Search" --runs 2
 ```
 
@@ -181,7 +181,7 @@ from a few selected answer samples.
 
 Produce requests without creating fictional results:
 
-    npm --prefix red-cup-engineering/public-publication-discovery-services-section run study:queries -- --surface "Bing Search" --surface "ChatGPT Search" --runs 2
+    npm --prefix red-cup-engineering/publication-discovery-engineering-services-section run study:queries -- --surface "Bing Search" --surface "ChatGPT Search" --runs 2
 
 With the current source this emits 64 JSONL observation **requests**, not
 provider requests or observed answers. It performs no network access. For a
@@ -192,11 +192,11 @@ Distinguish retrieved (null if unknowable), mentioned, cited, factuality,
 freshness and observed external referral/conversion. Feed one authentic JSON
 observation to the existing recorder on stdin:
 
-    node red-cup-engineering/public-publication-discovery-services-section/src/record-observation.mjs --out content/observations/YOUR-DATED-OBSERVATIONS.jsonl
+    node red-cup-engineering/publication-discovery-engineering-services-section/src/record-observation.mjs --out content/observations/YOUR-DATED-OBSERVATIONS.jsonl
 
 Generate a descriptive summary from real ledger observations:
 
-    npm --prefix red-cup-engineering/public-publication-discovery-services-section run study:summary -- content/query-sets/561-group.json content/observations/2026-10-03-public-search-baseline.jsonl
+    npm --prefix red-cup-engineering/publication-discovery-engineering-services-section run study:summary -- content/query-sets/561-group.json content/observations/2026-10-03-public-search-baseline.jsonl
 
 This historical ledger supplies only **one** existing 561 Group observation;
 the remaining 15 questions are **missing measurements**, not zero-success
@@ -289,8 +289,8 @@ indexing diagnosis can be inferred.
 Read both types of original publication observations with:
 
 ```sh
-node red-cup-engineering/public-publication-discovery-services-section/src/analyze-observations.mjs content/query-sets/561-group.json content/observations/2026-10-21-branded-public-search.jsonl
-node red-cup-engineering/public-publication-discovery-services-section/src/analyze-observations.mjs content/query-sets/koios-news.json content/observations/2026-10-21-branded-public-search.jsonl
+node red-cup-engineering/publication-discovery-engineering-services-section/src/analyze-observations.mjs content/query-sets/561-group.json content/observations/2026-10-21-branded-public-search.jsonl
+node red-cup-engineering/publication-discovery-engineering-services-section/src/analyze-observations.mjs content/query-sets/koios-news.json content/observations/2026-10-21-branded-public-search.jsonl
 ```
 
 **Next useful effect:** original site/release owners should verify
@@ -316,7 +316,7 @@ Run it with the actual original corporate manifest, panel, and observation
 ledger:
 
 ```sh
-npm --prefix red-cup-engineering/public-publication-discovery-services-section run assist:discovery -- \
+npm --prefix red-cup-engineering/publication-discovery-engineering-services-section run assist:discovery -- \
   content/publications/561-group.json \
   content/query-sets/561-group.json \
   content/observations/2026-10-03-public-search-baseline.jsonl
@@ -352,7 +352,7 @@ CRM records or campaign budgets. Any actual remediation, social publishing,
 paid campaign, or x402 purchase remains behind original owner, customer and
 provider grants. This producer never issues those rights.
 
-Native checks: `npm --prefix red-cup-engineering/public-publication-discovery-services-section run check && npm --prefix red-cup-engineering/public-publication-discovery-services-section run verify`. The added test exercises
+Native checks: `npm --prefix red-cup-engineering/publication-discovery-engineering-services-section run check && npm --prefix red-cup-engineering/publication-discovery-engineering-services-section run verify`. The added test exercises
 the existing 561 Group corpus, zero-observation semantics and wrong-entity
 refusals. This producer update is not proof that Enterprise ASSIST is deployed
 or that any search ranking, mention rate or customer conversion improved.
@@ -391,6 +391,6 @@ The original producer now exports `@561-group/publication-discovery-services-sec
 
 One caller submits `{ dataClassification: "public-only", manifest, panel, observations, sources }`: a public self-supplied publication manifest, a versioned panel of 1–32 questions, 0–128 typed observed answers and three HTTPS reference URLs naming the inputs. The x402-specific admission refuses a body above 64 KiB and refuses screenshot/provider-export/note evidence (only public HTTPS `url` and `citation` evidence are permitted). The original reader still validates query identity, geographic context and distinct provider observation instants. Its readout marks absent observations as missing, caller-provided source claims as **not independently verified**, and actual search/commerce effects as **not assessed**.
 
-The original Networking x402 market can bind those two exports as a validation and compute pair. Any seller tariff, ledger payee, merchant, release, privacy policy, customer order, refund and live x402 transaction remains a **separate** authorized Causeway Market/Coesite operation. This repository still has `private: true` and is **not** evidence of an installed x402 route or service revenue. Source native checks: `npm --prefix red-cup-engineering/public-publication-discovery-services-section run check && npm --prefix red-cup-engineering/public-publication-discovery-services-section run verify` and `npm --prefix red-cup-engineering/public-publication-discovery-services-section run test:paid-discovery`. Do not publish a paid listing until the existing Market catalog, package forest and provider receiving have been independently verified.
+The original Networking x402 market can bind those two exports as a validation and compute pair. Any seller tariff, ledger payee, merchant, release, privacy policy, customer order, refund and live x402 transaction remains a **separate** authorized Causeway Market/Coesite operation. This repository still has `private: true` and is **not** evidence of an installed x402 route or service revenue. Source native checks: `npm --prefix red-cup-engineering/publication-discovery-engineering-services-section run check && npm --prefix red-cup-engineering/publication-discovery-engineering-services-section run verify` and `npm --prefix red-cup-engineering/publication-discovery-engineering-services-section run test:paid-discovery`. Do not publish a paid listing until the existing Market catalog, package forest and provider receiving have been independently verified.
 
 An internal MetroPlat office and Enterprise ASSIST may call the very same pure producer under their original authenticated source/custody grants. External customers may pay a merchant for this bounded algorithm only after the seller separately receives truthful input/output schema, tariff, pricing and refund conditions. Private Search Console exports and associate-submitted advertisements belong to different consented services, never this public computation.
