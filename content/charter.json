@@ -21,6 +21,15 @@
     "mutating personal or third-party properties without authority",
     "confusing citation frequency with factual correctness or commercial value"
   ],
+  "downstreamMarketRequirement": {
+    "id": "public-business-ahrefs-meet-then-beat-2026-10-24",
+    "source": "https://github.com/causeway-services/public-services-section/blob/main/services/public-economic-services-section/services/public-business-services-section/content/requirements/ahrefs-meet-then-beat.json",
+    "marketOwner": "Causeway Public Business Services",
+    "supplierRole": "Maintain the original seven-layer crawl/entity/content/evidence/distribution/retrieval/measurement evidence and upstream qualified research and technical decisions used by the wider Public Business competitor parity requirement. This charter is not a new commercial SEO company, product, crawler or subscription.",
+    "condition": "Original Public Business requirement must own each customer-facing Ahrefs parity and superiority decision; this internal service may only supply witnessed evidence and source-bound reuse.",
+    "currentState": "not-externally-qualified",
+    "nextReceiver": "Compare date/mode/locale/entity-resolved original 561 Group queries and authorized first-party search/referral evidence, then route real correction and authorized public placement to its original publisher before claiming improved discovery."
+  },
   "provenance": {
     "leaderDirective": "2026-10-03: refocus from the mock customer onto the fact that 561 Group is a large media enterprise with almost no deliberate GEO program",
     "formedBy": "ChatGPT-Web CPO/CTO"
