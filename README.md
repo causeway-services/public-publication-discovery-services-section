@@ -163,9 +163,10 @@ scanner, an invented publication platform or a ranking-success claim.
 
 ### Science: registered questions and falsifiable contrasts
 
-The [561 Group query set](content/query-sets/561-group.json) contains 16
-versioned questions: five previous corporate questions and 11 new agentics,
-AI, mathematics and unrelated-entity probes. Preserve **branded**, **unbranded**
+The [561 Group query set](content/query-sets/561-group.json) now holds 31
+versioned questions: its original 16 corporate, agentics, AI and mathematics
+questions, plus 15 distinct environmental, climate, institutional-resilience,
+AI political-economy and crypto-commons questions added October 27. Preserve **branded**, **unbranded**
 and **control** roles. The unit of observation is one real response to an
 exact query on a named engine/surface at a recorded locale and time.
 
@@ -183,7 +184,7 @@ Produce requests without creating fictional results:
 
     npm --prefix red-cup-engineering/publication-discovery-engineering-services-section run study:queries -- --surface "Bing Search" --surface "ChatGPT Search" --runs 2
 
-With the current source this emits 64 JSONL observation **requests**, not
+With the current 31-question panel this emits 124 JSONL observation **requests** (2 surfaces × 2 runs), not
 provider requests or observed answers. It performs no network access. For a
 real manually witnessed public search or authorized answer experiment, record
 the actual response date/time, named provider/surface mode, locale, exact
@@ -199,7 +200,7 @@ Generate a descriptive summary from real ledger observations:
     npm --prefix red-cup-engineering/publication-discovery-engineering-services-section run study:summary -- content/query-sets/561-group.json content/observations/2026-10-03-public-search-baseline.jsonl
 
 This historical ledger supplies only **one** existing 561 Group observation;
-the remaining 15 questions are **missing measurements**, not zero-success
+the remaining 30 current-panel questions are **missing measurements**, not zero-success
 responses. The analyzer reports each topic / role / provider / mode / locale
 separately, and never invents ranking positions, GEO scores, retrieval
 events, or citations. Before/after comparisons need a stable versioned
@@ -337,8 +338,8 @@ The `assist.publication-discovery-reading/v1` JSON output has:
 - `independentReceiving`: explicit `not-assessed` for site release, live
   crawl, approvals, provider access, campaigns and customer outcomes.
 
-The Group corporate query panel has 16 source-authored questions; the
-historical 2026-10-03 ledger covers only one. The other 15 remain missing
+The Group corporate query panel now has 31 source-authored questions; the
+historical 2026-10-03 ledger covers only one. The other 30 remain missing
 observations. Run later baselines with the correct real observed ledger,
 not fabricated answers or search-engine metrics. The output never equates a
 citation with a witnessed model retrieval, a customer referral or a sale.
@@ -394,3 +395,33 @@ One caller submits `{ dataClassification: "public-only", manifest, panel, observ
 The original Networking x402 market can bind those two exports as a validation and compute pair. Any seller tariff, ledger payee, merchant, release, privacy policy, customer order, refund and live x402 transaction remains a **separate** authorized Causeway Market/Coesite operation. This repository still has `private: true` and is **not** evidence of an installed x402 route or service revenue. Source native checks: `npm --prefix red-cup-engineering/publication-discovery-engineering-services-section run check && npm --prefix red-cup-engineering/publication-discovery-engineering-services-section run verify` and `npm --prefix red-cup-engineering/publication-discovery-engineering-services-section run test:paid-discovery`. Do not publish a paid listing until the existing Market catalog, package forest and provider receiving have been independently verified.
 
 An internal MetroPlat office and Enterprise ASSIST may call the very same pure producer under their original authenticated source/custody grants. External customers may pay a merchant for this bounded algorithm only after the seller separately receives truthful input/output schema, tariff, pricing and refund conditions. Private Search Console exports and associate-submitted advertisements belong to different consented services, never this public computation.
+
+
+## Reuse discovered knowledge; stop doing a first SEO/GEO research pass in every app
+
+The [original MAPE-K publication-discovery procedure](content/processes/publication-discovery-cycle.json)
+now carries \`standingKnowledge\`: established findings with source references,
+acceptance dates and **explicit witnessed change triggers**. The same knowledge
+is reused by Enterprise ASSIST, TUFTE/public publishing receivers and authorized
+operational apps. Merely invoking an app, revisiting Google's documentation, or
+running a familiar query is **not** a new discovery or a reason to re-open a
+settled practice. Superseding evidence triggers a targeted revalidation.
+
+Red Cup Engineering owns the **single executable projector**
+\`src/plan-discovery-work.mjs\` in the existing
+[Publication Discovery engine](https://github.com/red-cup-engineering/publication-discovery-engineering-services-section).
+The source-owned [561 contexts](content/query-sets/561-group-observation-contexts.json)
+use only actually observed ChatGPT Web search interfaces, keeping fast/slow
+and unknown locale separate; they are **not provider credentials**.
+\`content/observations/\` remains the sole evidence ledger. On the current,
+unreceived site release, the computed result must be \`held\`, not fabricated
+search improvements. A source-qualified independent release enables a bounded
+\`ready\` observation turn; a query already observed after that release becomes
+\`settled\` until a genuinely newer release. The same input yields the same
+stable work IDs, reusable facts, and no extra browsing.
+
+The app-facing output is a pure versioned JSON contract, optionally composed
+into \`projectAssistDiscovery(...)\`; consumers must admit publisher/tenant
+scope before showing private data, preserve original Work and review authority,
+and verify publication/reader/merchant outcomes independently. The candidate
+engine source is not proof of an installed ASSIST, website or MetroPlat service.

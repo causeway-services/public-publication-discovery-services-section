@@ -1,0 +1,12 @@
+[
+  {
+    "surface": "ChatGPT Web public search (fast)",
+    "surfaceMode": "search",
+    "locale": "und"
+  },
+  {
+    "surface": "ChatGPT Web public search (slow)",
+    "surfaceMode": "search",
+    "locale": "und"
+  }
+]

@@ -46,5 +46,84 @@
     "engineering": "Red Cup implements and verifies canonical HTML, stable versions, Scholar tags, proper structured data, Signposting links and sitemaps in the current original renderer rather than a GEO-only parallel CMS.",
     "operations": "Coesite and Causeway reconcile discovered defects and measured gains with provider deployments, publisher rights, Search Console/Bing Webmaster evidence and independent receiving.",
     "acceptance": "One native authored fix linked to an observed problem, qualifying tests and original deployment readback, then independent source-bound search/answer or user task evidence. Source-only improvements are not indexed visibility."
+  },
+  "standingKnowledge": [
+    {
+      "id": "search-result-is-not-ai-answer-citation",
+      "claim": "A public Web search URL is not evidence that an AI answer cited the source or retrieved it internally.",
+      "source": "content/standards/publication-discovery-contract.json",
+      "acceptedAt": "2026-10-24T06:16:40Z",
+      "reopenOn": [
+        "provider-evidence-changed",
+        "contradictory-receipt"
+      ]
+    },
+    {
+      "id": "seven-independent-discovery-layers",
+      "claim": "Crawl, identity, content, evidence, distribution, retrieval, and measurement are separate receiving states; do not compress them into a GEO score.",
+      "source": "content/standards/publication-discovery-contract.json",
+      "acceptedAt": "2026-10-24T06:16:40Z",
+      "reopenOn": [
+        "site-contract-revised",
+        "contradictory-receipt"
+      ]
+    },
+    {
+      "id": "not-a-llms-txt-ranking-shortcut",
+      "claim": "Do not recommend llms.txt or hidden AI-only metadata as a substitute for valid canonical public HTML, original evidence, and source-owned links.",
+      "source": "content/standards/publication-discovery-contract.json",
+      "acceptedAt": "2026-10-24T06:16:40Z",
+      "reopenOn": [
+        "provider-evidence-changed",
+        "contradictory-receipt"
+      ]
+    },
+    {
+      "id": "original-publisher-custody",
+      "claim": "Publication owners and their approved releases control changes. A draft PR, site source file, or passing candidate test does not establish a live indexed publication.",
+      "source": "content/processes/publication-discovery-cycle.json",
+      "acceptedAt": "2026-10-24T06:16:40Z",
+      "reopenOn": [
+        "site-contract-revised",
+        "contradictory-receipt"
+      ]
+    },
+    {
+      "id": "same-question-same-provider-not-a-new-finding",
+      "claim": "A repeated unaltered public query yields another dated sample, not a new SEO finding or a causal visibility improvement without a matched change and independent evidence.",
+      "source": "content/processes/publication-discovery-cycle.json",
+      "acceptedAt": "2026-10-24T06:16:40Z",
+      "reopenOn": [
+        "provider-evidence-changed",
+        "contradictory-receipt"
+      ]
+    },
+    {
+      "id": "source-first-public-topic-not-political-profile",
+      "claim": "Discoverability research should use public topical questions and voluntary interactions, not personally inferred political attributes, manipulated discussions or unauthorized outreach.",
+      "source": "content/processes/publication-discovery-cycle.json",
+      "acceptedAt": "2026-10-27T08:02:13Z",
+      "reopenOn": [
+        "site-contract-revised",
+        "contradictory-receipt"
+      ]
+    }
+  ],
+  "operatingInputBindings": {
+    "manifest": "content/publications/<publication>.json",
+    "queryPanel": "content/query-sets/<publication>.json",
+    "observations": "content/observations/*.jsonl",
+    "knowledge": "content/processes/publication-discovery-cycle.json#standingKnowledge",
+    "contexts": "content/query-sets/561-group-observation-contexts.json (exact witnessed interface labels, surface modes and unknown locale; not provider credentials)",
+    "release": "separately witnessed public-release receipt with revision, date and source URL",
+    "changeReceipts": "independently dated, source-qualified material policy/contract changes only",
+    "engineering": "red-cup-engineering/publication-discovery-engineering-services-section/src/plan-discovery-work.mjs",
+    "consumers": [
+      "Enterprise ASSIST",
+      "TUFTE publication receivers",
+      "Causeway Publication Discovery",
+      "authorized MetroPlat Work"
+    ],
+    "rule": "Use a source-linked work plan. Reuse standing knowledge without new external research until a qualified change receipt matches reopenOn; treat measurements as held until an independently witnessed publication release. Producer, publisher, campaign account, spending and customer authority remain separate."
   }
 }
