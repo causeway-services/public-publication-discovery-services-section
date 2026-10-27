@@ -114,7 +114,7 @@
     "queryPanel": "content/query-sets/<publication>.json",
     "observations": "content/observations/*.jsonl",
     "knowledge": "content/processes/publication-discovery-cycle.json#standingKnowledge",
-    "contexts": "explicit original provider/mode/locale observation contexts",
+    "contexts": "content/query-sets/561-group-observation-contexts.json (exact witnessed interface labels, surface modes and unknown locale; not provider credentials)",
     "release": "separately witnessed public-release receipt with revision, date and source URL",
     "changeReceipts": "independently dated, source-qualified material policy/contract changes only",
     "engineering": "red-cup-engineering/publication-discovery-engineering-services-section/src/plan-discovery-work.mjs",
