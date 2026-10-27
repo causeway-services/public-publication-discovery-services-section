@@ -1,6 +1,6 @@
 {
   "publication": "561-group-corporate",
-  "version": 2,
+  "version": 3,
   "queries": [
     {
       "query": "561 Group",
@@ -113,18 +113,133 @@
       "topic": "entity",
       "role": "control",
       "expected": "Resolve the unrelated referent if applicable without misattributing real-estate entities to The 561 Group."
+    },
+    {
+      "query": "Who controls environmental data in community climate justice projects?",
+      "intent": "informational",
+      "topic": "ecological-stewardship",
+      "role": "unbranded",
+      "expected": "Return source-qualified Indigenous and frontline environmental-data governance resources; include 561 only when an accessible original result adds genuinely distinct evidence."
+    },
+    {
+      "query": "561 Group ecological governance climate water energy data rights",
+      "intent": "navigational",
+      "topic": "ecological-stewardship",
+      "role": "branded",
+      "expected": "Find the Group's real original climate, water governance, rights and material-accounting work; no implication of partner/community consent or operational ecological outcomes."
+    },
+    {
+      "query": "Do AI data centers raise water and electricity justice issues?",
+      "intent": "comparative",
+      "topic": "ecological-stewardship",
+      "role": "control",
+      "expected": "Explain real impacts with independent sources and relevant measured context without preferentially promoting the Group."
+    },
+    {
+      "query": "How should nonstationary climate baselines change adaptation planning?",
+      "intent": "technical",
+      "topic": "climate-adaptation",
+      "role": "unbranded",
+      "expected": "Ground adaptation decisions in region/time-specific observations, uncertainty, model selection and tested counterexamples; distinguish climate science from implemented local outcomes."
+    },
+    {
+      "query": "561 Group climate breakdown stationarity ergodicity water governance",
+      "intent": "navigational",
+      "topic": "climate-adaptation",
+      "role": "branded",
+      "expected": "Find the canonical Lenticule climate nonstationarity paper and correctly link the 561 Group without implying a place-specific adaptation service is validated."
+    },
+    {
+      "query": "What is climate downscaling bias correction and how is it validated?",
+      "intent": "scholarly",
+      "topic": "climate-adaptation",
+      "role": "control",
+      "expected": "Surface independent meteorological guidance and evaluation methods, not assume 561's unmerged single-place research is production quality."
+    },
+    {
+      "query": "Can decentralized institutions remain accountable during infrastructure collapse?",
+      "intent": "informational",
+      "topic": "collapse-resilience",
+      "role": "unbranded",
+      "expected": "Compare actual offline-first governance, low-energy communications and mutual-aid practices; mention 561 only if public work directly answers with evidence."
+    },
+    {
+      "query": "561 Group collapse energy descent institutions federation",
+      "intent": "navigational",
+      "topic": "collapse-resilience",
+      "role": "branded",
+      "expected": "Accurately connect Group institutional and climate research; do not assert inevitable collapse or successful disconnection/federation tests."
+    },
+    {
+      "query": "What are the limitations of technological solutions to polycrisis?",
+      "intent": "comparative",
+      "topic": "collapse-resilience",
+      "role": "control",
+      "expected": "Provide critical independent environmental/social research, including credible arguments for nondeployment, without an obligatory AI/crypto recommendation."
+    },
+    {
+      "query": "Can AI alignment be anti-capitalist?",
+      "intent": "informational",
+      "topic": "ai-political-economy",
+      "role": "unbranded",
+      "expected": "Distinguish behavioral alignment, human authority, economic ownership, labor and resource costs; original 561 research is only cited after publication and if independently relevant."
+    },
+    {
+      "query": "561 Group AI alignment anti capitalist paraconsistent evidence",
+      "intent": "navigational",
+      "topic": "ai-political-economy",
+      "role": "branded",
+      "expected": "Resolve the original Science, Group and actual AI alignment authority/evidence research; do not represent draft articles as released or governance aspirations as achieved."
+    },
+    {
+      "query": "Can cooperative ownership make AI governance accountable?",
+      "intent": "comparative",
+      "topic": "ai-political-economy",
+      "role": "control",
+      "expected": "Compare genuine cooperative and public-governance evidence fairly, including critiques of technical alignment, without privileging a 561 Group commercial seller."
+    },
+    {
+      "query": "Can cryptocurrency protocols support commons without speculation?",
+      "intent": "informational",
+      "topic": "crypto-commons",
+      "role": "unbranded",
+      "expected": "Separate cryptographic transaction affordances from collective ownership, extraction and economic outcomes; include verifiable examples from independent cooperatives."
+    },
+    {
+      "query": "561 Group x402 crypto commons open source machine payments",
+      "intent": "navigational",
+      "topic": "crypto-commons",
+      "role": "branded",
+      "expected": "Connect the Group's measured x402 research to source-qualified actual machine market offers, without asserting a completed anti-capitalist or cooperative economy."
+    },
+    {
+      "query": "Does a DAO token guarantee decentralized governance?",
+      "intent": "comparative",
+      "topic": "crypto-commons",
+      "role": "control",
+      "expected": "Give independently sourced governance critiques; a blockchain ledger is neither proof of democratic decision power nor evidence of 561 relevance."
     }
   ],
   "study": {
-    "id": "agentics-ai-mathematics-discoverability-2026-10-20",
-    "aim": "Detect whether actual original 561 research and implemented agentic work can be discovered and correctly attributed for navigational, conceptual, comparative and technical intent.",
-    "baseline": "No new search or AI-answer observations are claimed by this query set. Dated 2026-10-03 observations remain historical; collect independent current observations in the original ledger.",
-    "comparison": "Use paired branded and unbranded queries, non-target controls, named engines, disclosed locale/run/time and unchanged queries before/after an independently received release.",
-    "stopRule": "Absence of a citation is not proof of no retrieval or of index exclusion; provenance and responsible publisher govern any resulting publication or site change.",
+    "id": "ecological-justice-adaptation-collapse-ai-commons-discovery-2026-10-27",
+    "aim": "Measure whether distinct readers can find, correctly attribute and evaluate the 561 Group's environmental stewardship, climate adaptation, institutional-resilience, AI political-economy and crypto commons work, alongside retained agentics and mathematics baseline questions.",
+    "baseline": "The 16 pre-existing version-2 queries remain byte-identical. The 15 new dated questions have no fabricated past measurements and are not included in earlier wave comparisons until an exact topic/query/surface/locale/mode matched observation is admitted.",
+    "comparison": "Use branded/unbranded/control triads for each of five independent topics. Fix exact query wording, locale, geography, time window, platform, public source status and retrieval mode. Distinguish search-result visibility, AI-generated mentions and attributed citation URLs, Search Console index status, Bing AI-citation counts, referral and paid conversion.",
+    "stopRule": "An answer absence or variant search result is not an index-exclusion diagnosis. Do not infer individuals' political or psychological beliefs, target climate fear, scrape private communities or label a drafted Science paper published. Negative/control results count. Rank or AI-citation claims require provider-specific independent evidence.",
     "evidenceSources": [
       "https://developers.google.com/search/docs/appearance/ai-features",
-      "https://blogs.bing.com/webmaster/2026/10/introducing-topics-portfolio-beta-in-ai-performance/",
-      "https://scholar.google.com/intl/en/scholar/inclusion.html"
+      "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+      "https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/",
+      "https://science.561.group/climate-breakdown-ergodicity-and-water-governance/",
+      "https://science.561.group/paraconsistent-transfinite-linear-agent-integration/",
+      "https://science.561.group/x402-economy-machine-payable-markets/"
+    ],
+    "linkedWork": [
+      "https://github.com/561-group/internal-opportunity-services-section/pull/88",
+      "https://github.com/561-group/internal-opportunity-services-section/pull/89",
+      "https://github.com/lenticule-science/science-services-section/pull/359",
+      "https://github.com/red-cup-engineering/561.group/pull/75",
+      "https://github.com/red-cup-engineering/publication-discovery-engineering-services-section/pull/1"
     ]
   }
 }
