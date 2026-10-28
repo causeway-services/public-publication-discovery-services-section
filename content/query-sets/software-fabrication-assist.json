@@ -1,0 +1,156 @@
+{
+  "publication": "software-fabrication-assist",
+  "version": 1,
+  "queries": [
+    {
+      "query": "Software Fabrication ASSIST 561 Group",
+      "intent": "navigational",
+      "topic": "product-identity",
+      "role": "branded",
+      "expected": "Identify the explicitly proposed first-party 561 Group software product and original source. Do not invent a live SaaS host, production customer or paid subscription."
+    },
+    {
+      "query": "software.assist.561.group",
+      "intent": "navigational",
+      "topic": "host-identity",
+      "role": "branded",
+      "expected": "Resolve the intended canonical ASSIST app identity and its actual publication status. A planned hostname is not evidence of an installed service."
+    },
+    {
+      "query": "561 Group agentic software development lifecycle platform",
+      "intent": "commercial",
+      "topic": "product-identity",
+      "role": "branded",
+      "expected": "Distinguish the source-authored Software Fabrication ASSIST proposal, the real original software mission executor, and a generally available commercial SaaS."
+    },
+    {
+      "query": "Red Cup Engineering software mission execution",
+      "intent": "technical",
+      "topic": "implementation",
+      "role": "branded",
+      "expected": "Find the actual source-owned public software-mission-execution-service, its bounded command tools, semantic receipt interface and stated unsupported production guarantees."
+    },
+    {
+      "query": "What software engineering assurance does the 561 Group offer?",
+      "intent": "informational",
+      "topic": "trust",
+      "role": "branded",
+      "expected": "Describe exact current original Engineering four-closure requirements, proof and independent receiving status without attributing completed certification."
+    },
+    {
+      "query": "Which AI platforms cover requirements, architecture, proof, code and production acceptance?",
+      "intent": "comparative",
+      "topic": "full-lifecycle",
+      "role": "unbranded",
+      "expected": "Compare actual engineering workflows across vendors with verifiable dated evidence; include 561 only when relevant, accessible and genuinely competitive."
+    },
+    {
+      "query": "Agentic SDLC SaaS with GitHub integration and audit trail",
+      "intent": "commercial",
+      "topic": "customer-workflows",
+      "role": "unbranded",
+      "expected": "Return actually purchasable or deployed tools with supported source and approval boundaries; exclude proposed services from generally available rankings."
+    },
+    {
+      "query": "Best AI software development lifecycle platform for a small engineering team",
+      "intent": "commercial",
+      "topic": "buyer-selection",
+      "role": "unbranded",
+      "expected": "Compare features, security, total cost, release gates and customer fit from current evidence without a guaranteed single winner."
+    },
+    {
+      "query": "How to verify code produced by autonomous coding agents?",
+      "intent": "technical",
+      "topic": "agent-verification",
+      "role": "unbranded",
+      "expected": "Explain executable tests, source integrity, sandbox isolation, review evidence and independent beneficiary acceptance from reproducible sources."
+    },
+    {
+      "query": "How do you preserve requirements traceability through AI software development?",
+      "intent": "technical",
+      "topic": "requirements",
+      "role": "unbranded",
+      "expected": "Explain source-linked requirements, versioned specifications, design changes, provenance and reconciliation of final delivered software."
+    },
+    {
+      "query": "How can agentic software factories prevent duplicate deployments and unsafe merges?",
+      "intent": "technical",
+      "topic": "release-governance",
+      "role": "unbranded",
+      "expected": "Assess explicit actor authority, resource isolation, immutable revision selection, CI gates, serial integration and recovery evidence."
+    },
+    {
+      "query": "Proof gate before AI code generation",
+      "intent": "technical",
+      "topic": "specification-driven-engineering",
+      "role": "unbranded",
+      "expected": "Distinguish formal proofs, conformance tests, design reviews and ordinary coding-agent outputs; report limitations rather than advertising novelty."
+    },
+    {
+      "query": "What are the five DORA software delivery metrics?",
+      "intent": "informational",
+      "topic": "measurement",
+      "role": "control",
+      "expected": "Give the correct current five metrics from DORA, including deployment rework rate, without artificially favoring any vendor."
+    },
+    {
+      "query": "Software Mind AI-Accelerated Software Development Lifecycle",
+      "intent": "navigational",
+      "topic": "competitor",
+      "role": "control",
+      "expected": "Find Software Mind's own current service and distinguish its advertised throughput/lead-time claims from independently verified evidence."
+    },
+    {
+      "query": "GitLab Duo Agent Platform coding workflow",
+      "intent": "navigational",
+      "topic": "competitor",
+      "role": "control",
+      "expected": "Find GitLab's real current platform features and documented conditions without treating it as an ASSIST product."
+    },
+    {
+      "query": "GitHub Copilot coding agent software issue pull request",
+      "intent": "navigational",
+      "topic": "competitor",
+      "role": "control",
+      "expected": "Find authentic current GitHub Copilot coding-agent workflows and supported review/security boundaries."
+    },
+    {
+      "query": "Agentic software engineering platform with customer acceptance receipts",
+      "intent": "commercial",
+      "topic": "outcome-verification",
+      "role": "unbranded",
+      "expected": "Find products that actually evidence production receiving and customer acceptance, not only successful model output or test-suite claims."
+    },
+    {
+      "query": "Software development automation ROI per accepted change",
+      "intent": "comparative",
+      "topic": "unit-economics",
+      "role": "unbranded",
+      "expected": "Compare measured accepted changes, human review, rollback, tool/model/cloud costs and warranty support, not tokens or generated code volume."
+    }
+  ],
+  "study": {
+    "id": "software-fabrication-assist-prelaunch-discovery-2026-10-27",
+    "phase": "prelaunch-source-discovery-baseline",
+    "ownerWork": "https://github.com/red-cup-engineering/assist/issues/32",
+    "aim": "Determine whether actual source-owned agentic software engineering work is accurately findable, attributable, and competitively useful before and after an independently received Software Fabrication ASSIST public release.",
+    "preconditions": [
+      "No software.assist.561.group live public service, customer, search-index entry or third-party answer-engine citation is inferred from a source roster record or this query plan.",
+      "Each real measurement is a dated, provider/surface/mode/locale-qualified observation with independently verified original URL and truthful entity attribution; missing is unobserved, not a ranking failure.",
+      "Branded and unbranded roles are distinct. Unbranded queries have no obligation to cite the 561 Group; competitor and DORA controls should not be misattributed.",
+      "Search index entries, generated responses, citations, user traffic, qualified leads, customer acceptance and paid transactions are separate claims with separate original evidence.",
+      "Preserve documented provider versions, price tiers, feature support and independent receiving on any Software Mind performance comparison; provider-reported 10x is not our baseline.",
+      "No product/source marketing page is published under an unadmitted authority; private mission receipts and third-party customer material must not enter the public query ledger."
+    ],
+    "comparison": "Record two preregistered waves per named search/answer engine surface after exact public release when available. Preserve identical panel version, query bytes, locale, surface mode and sampling method; compare branded entity resolution, source-accurate citation and real beneficiary navigation separately. Report missing/unobservable states, preserve negative and contradictory evidence, never claim AI citation uplift from generated metadata alone.",
+    "evidenceSources": [
+      "https://github.com/red-cup-engineering/assist/issues/32",
+      "https://github.com/red-cup-engineering/assist/pull/33",
+      "https://github.com/red-cup-engineering/software-mission-execution-service",
+      "https://science.561.group/dispatching-concurrent-ai-agents-at-scale/",
+      "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "https://softwaremind.com/ai-accelerated-software-development-lifecycle/",
+      "https://dora.dev/guides/dora-metrics/"
+    ]
+  }
+}
