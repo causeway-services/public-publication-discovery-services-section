@@ -425,3 +425,21 @@ into \`projectAssistDiscovery(...)\`; consumers must admit publisher/tenant
 scope before showing private data, preserve original Work and review authority,
 and verify publication/reader/merchant outcomes independently. The candidate
 engine source is not proof of an installed ASSIST, website or MetroPlat service.
+
+
+## Software Fabrication ASSIST: source-first SEO and AI-answer discovery
+
+The [Leader's full agentic SDLC / Software Mind requirement](https://github.com/red-cup-engineering/assist/issues/32) and [draft source-owned ASSIST product PR #33](https://github.com/red-cup-engineering/assist/pull/33) are **not a hosted public product** or an indexing-success claim. This original Publication Discovery service now owns a separate, focused [18-query Software Fabrication ASSIST panel](content/query-sets/software-fabrication-assist.json), rather than adding a second GEO scanner or editing the canonical corporate panel to advertise an unlaunched app.
+
+The prelaunch panel contains five branded identity/technology questions, nine unbranded technical and commercial buyer-intent questions, and four independent control questions (DORA, Software Mind, GitLab, GitHub). Each has a declared intent, topic, role and falsifiable expected answer. For unbranded questions, an answer is **not required** to include 561 Group. Every provider response must be independently witnessed, dated and source-qualified; no request packet counts as a real search impression, citation, indexed page, generated-answer retrieval or signed customer conversion.
+
+The already owned query-panel code can compile requests without network or imaginary answer observations:
+
+```sh
+node red-cup-engineering/publication-discovery-engineering-services-section/src/query-panel.mjs \
+  content/query-sets/software-fabrication-assist.json --surface "Bing Search" --runs 2
+```
+
+That selection is **36 requested observations**, not 36 results. Keep provider-specific ChatGPT/Google AI surface and locale observations in distinct controls. Later add only real public observations to the original dated JSONL ledger through the original recorder; until then the count of witnessed ASSIST answer citations remains **unknown**, not zero. This panel is the source-side instrument for SEO/GEO measurement, separate from the original public publisher's right to release real product documentation and the original customer authority to publish case studies.
+
+The first operational SEO gate is an independently responding, source-bound canonical public service page with an accurate title, crawl/robots/sitemap behavior, accessible original content, clear customer and security disclosures, and first-party links back to original technical work. The second is real search and answer findability, citation attribution and qualified visitor outcomes measured on fixed comparison panels. The third is real customer software received and, when applicable, settled. Do not infer any later gate from an earlier file, source test or structured data. This follows [Google's 2026 generative-search guidance](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide), which retains ordinary SEO fundamentals and values genuine non-commodity content.
