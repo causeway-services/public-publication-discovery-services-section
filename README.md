@@ -1,4 +1,6 @@
-# Publication Discovery Services Section
+# @causeway-services/public-publication-discovery-services-section
+
+public-publication-discovery-services-section is a services section of the 561 Group.
 
 > Code custody: this section's executable code lives in `red-cup-engineering/publication-discovery-engineering-services-section`. Commands below run it against this checkout: set `PUBLICATION_DISCOVERY_ROOT` to this repository's root (default: the current directory).
 
