@@ -3,11 +3,11 @@
   "authority": "561-operated-community-enterprise",
   "status": "built-origin-unsettled",
   "canonicalEntityName": "Turntide Islands",
-  "canonicalEntityUrl": "https://turntide-islands.561.group/",
+  "canonicalEntityUrl": "https://turntide.561.group/",
   "entityType": "Organization",
   "publisherOrOwner": "Turntide Islands",
   "surfaces": [
-    "https://turntide-islands.561.group/"
+    "https://turntide.561.group/"
   ],
   "capabilities": {
     "publicHome": "built-not-publicly-settled",
@@ -53,7 +53,7 @@
   },
   "baseline": {
     "observedAt": "2026-10-03",
-    "sourceFinding": "Static semantic site already emits pages, Atom feed, and schema.org graph. Union Media origin manifest declares https://turntide-islands.561.group/ but explicitly says public hosting/carrier settlement is incomplete.",
+    "sourceFinding": "Static semantic site already emits pages, Atom feed, and schema.org graph. Union Media origin manifest declares https://turntide.561.group/ but explicitly says public hosting/carrier settlement is incomplete.",
     "publicFinding": "A current public-web probe could not access the declared origin, and a bounded 'Turntide Islands 561' search did not surface the target.",
     "interpretation": "Primary blocker is public deployment/identity settlement, not content generation."
   },
