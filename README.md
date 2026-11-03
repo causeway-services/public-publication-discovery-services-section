@@ -81,6 +81,7 @@ The audit reports layer-by-layer residuals and never compresses them into a
 proprietary score.
 
 
+<<<<<<< HEAD
 ## Geographic search context: Northland private QA
 
 Search **locale** is not the observer's **location**. The original query
@@ -155,6 +156,8 @@ decision, independently witness relevant provider answer/search surfaces,
 local provider identity, customer need and the existing mock-client acceptance
 gate at [Causeway original Work #6](https://github.com/causeway-services/public-services-section/issues/6).
 
+=======
+>>>>>>> origin/feat/agentics-ai-math-search-study-20261020
 ## Agentics, artificial intelligence, mathematics: research / technology / practice
 
 The October 20, 2026 research priority is discoverability for **actual**
@@ -165,10 +168,16 @@ scanner, an invented publication platform or a ranking-success claim.
 
 ### Science: registered questions and falsifiable contrasts
 
+<<<<<<< HEAD
 The [561 Group query set](content/query-sets/561-group.json) now holds 31
 versioned questions: its original 16 corporate, agentics, AI and mathematics
 questions, plus 15 distinct environmental, climate, institutional-resilience,
 AI political-economy and crypto-commons questions added October 27. Preserve **branded**, **unbranded**
+=======
+The [561 Group query set](content/query-sets/561-group.json) contains 16
+versioned questions: five previous corporate questions and 11 new agentics,
+AI, mathematics and unrelated-entity probes. Preserve **branded**, **unbranded**
+>>>>>>> origin/feat/agentics-ai-math-search-study-20261020
 and **control** roles. The unit of observation is one real response to an
 exact query on a named engine/surface at a recorded locale and time.
 
@@ -184,9 +193,15 @@ from a few selected answer samples.
 
 Produce requests without creating fictional results:
 
+<<<<<<< HEAD
     npm --prefix red-cup-engineering/publication-discovery-engineering-services-section run study:queries -- --surface "Bing Search" --surface "ChatGPT Search" --runs 2
 
 With the current 31-question panel this emits 124 JSONL observation **requests** (2 surfaces × 2 runs), not
+=======
+    npm run study:queries -- --surface "Bing Search" --surface "ChatGPT Search" --runs 2
+
+With the current source this emits 64 JSONL observation **requests**, not
+>>>>>>> origin/feat/agentics-ai-math-search-study-20261020
 provider requests or observed answers. It performs no network access. For a
 real manually witnessed public search or authorized answer experiment, record
 the actual response date/time, named provider/surface mode, locale, exact
@@ -195,6 +210,7 @@ Distinguish retrieved (null if unknowable), mentioned, cited, factuality,
 freshness and observed external referral/conversion. Feed one authentic JSON
 observation to the existing recorder on stdin:
 
+<<<<<<< HEAD
     node red-cup-engineering/publication-discovery-engineering-services-section/src/record-observation.mjs --out content/observations/YOUR-DATED-OBSERVATIONS.jsonl
 
 Generate a descriptive summary from real ledger observations:
@@ -203,6 +219,16 @@ Generate a descriptive summary from real ledger observations:
 
 This historical ledger supplies only **one** existing 561 Group observation;
 the remaining 30 current-panel questions are **missing measurements**, not zero-success
+=======
+    node src/record-observation.mjs --out content/observations/YOUR-DATED-OBSERVATIONS.jsonl
+
+Generate a descriptive summary from real ledger observations:
+
+    npm run study:summary -- content/query-sets/561-group.json content/observations/2026-10-03-public-search-baseline.jsonl
+
+This historical ledger supplies only **one** existing 561 Group observation;
+the remaining 15 questions are **missing measurements**, not zero-success
+>>>>>>> origin/feat/agentics-ai-math-search-study-20261020
 responses. The analyzer reports each topic / role / provider / mode / locale
 separately, and never invents ranking positions, GEO scores, retrieval
 events, or citations. Before/after comparisons need a stable versioned
@@ -257,6 +283,7 @@ tests, original release/install evidence, independent public readback,
 and measured corrected source findability or improved real reader task.
 A query plan, test pass, source merge, public deployment and user-visible
 SEO/GEO effect are five different statuses.
+<<<<<<< HEAD
 
 ## October 21, 2026: actual sampled branded discovery observations
 
@@ -445,3 +472,5 @@ node red-cup-engineering/publication-discovery-engineering-services-section/src/
 That selection is **36 requested observations**, not 36 results. Keep provider-specific ChatGPT/Google AI surface and locale observations in distinct controls. Later add only real public observations to the original dated JSONL ledger through the original recorder; until then the count of witnessed ASSIST answer citations remains **unknown**, not zero. This panel is the source-side instrument for SEO/GEO measurement, separate from the original public publisher's right to release real product documentation and the original customer authority to publish case studies.
 
 The first operational SEO gate is an independently responding, source-bound canonical public service page with an accurate title, crawl/robots/sitemap behavior, accessible original content, clear customer and security disclosures, and first-party links back to original technical work. The second is real search and answer findability, citation attribution and qualified visitor outcomes measured on fixed comparison panels. The third is real customer software received and, when applicable, settled. Do not infer any later gate from an earlier file, source test or structured data. This follows [Google's 2026 generative-search guidance](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide), which retains ordinary SEO fundamentals and values genuine non-commodity content.
+=======
+>>>>>>> origin/feat/agentics-ai-math-search-study-20261020
