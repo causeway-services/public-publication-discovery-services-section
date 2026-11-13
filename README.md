@@ -390,7 +390,7 @@ commercial rights.
 
 ## Reusable, bounded x402-visible computation (not yet for sale)
 
-The original producer now exports `@561-group/publication-discovery-services-section/paid-discovery` with two ordinary source-owned Node 22+ functions: `admitPaidDiscoveryReport(body)` and `computePaidDiscoveryReport(body)`. These directly consume the existing seven-layer declared publication audit and the witnessed query panel summarizer. They do **not** create a second scanner, query engine, customer observations, payment rail, free-text inference claim or GEO score.
+The original producer now exports `@561-group/public-publication-discovery-services-section/paid-discovery` with two ordinary source-owned Node 22+ functions: `admitPaidDiscoveryReport(body)` and `computePaidDiscoveryReport(body)`. These directly consume the existing seven-layer declared publication audit and the witnessed query panel summarizer. They do **not** create a second scanner, query engine, customer observations, payment rail, free-text inference claim or GEO score.
 
 One caller submits `{ dataClassification: "public-only", manifest, panel, observations, sources }`: a public self-supplied publication manifest, a versioned panel of 1–32 questions, 0–128 typed observed answers and three HTTPS reference URLs naming the inputs. The x402-specific admission refuses a body above 64 KiB and refuses screenshot/provider-export/note evidence (only public HTTPS `url` and `citation` evidence are permitted). The original reader still validates query identity, geographic context and distinct provider observation instants. Its readout marks absent observations as missing, caller-provided source claims as **not independently verified**, and actual search/commerce effects as **not assessed**.
 

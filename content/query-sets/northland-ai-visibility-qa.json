@@ -175,7 +175,7 @@
     ],
     "comparison": "Within-surface comparable real samples; hold exact query, query location, surface mode and locale constant for any before/after comparison. Georgia is a geographic contamination control, not a market to solicit.",
     "evidenceSources": [
-      "https://github.com/causeway-services/publication-discovery-services-section",
+      "https://github.com/causeway-services/public-publication-discovery-services-section",
       "https://github.com/causeway-services/public-services-section/issues/6",
       "https://developers.google.com/search/docs/appearance/ai-features"
     ]
