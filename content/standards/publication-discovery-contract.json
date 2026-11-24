@@ -1,0 +1,100 @@
+{
+  "id": "publication-discovery-contract-v1",
+  "version": 1,
+  "layers": {
+    "crawl": {
+      "required": [
+        "publicHome",
+        "canonicalUrls",
+        "robots",
+        "sitemap"
+      ],
+      "recommended": [
+        "indexingConsole",
+        "freshnessNotification"
+      ]
+    },
+    "entity": {
+      "required": [
+        "canonicalEntityName",
+        "canonicalEntityUrl",
+        "entityType",
+        "publisherOrOwner"
+      ],
+      "recommended": [
+        "structuredEntity",
+        "authorEntities",
+        "sameAsEvidence",
+        "crossPropertyRelations"
+      ]
+    },
+    "content": {
+      "required": [
+        "descriptiveTitles",
+        "descriptions",
+        "semanticHeadings",
+        "stablePublicUrls"
+      ],
+      "recommended": [
+        "articleOrProductSemantics",
+        "publishedModifiedDates",
+        "sectionsTopics",
+        "preferredImages"
+      ]
+    },
+    "evidence": {
+      "required": [
+        "claimSourceBoundary"
+      ],
+      "recommended": [
+        "citations",
+        "correctionPolicy",
+        "provenance",
+        "originalDataOrExperience"
+      ]
+    },
+    "distribution": {
+      "required": [],
+      "recommended": [
+        "rssOrAtom",
+        "jsonFeed",
+        "topicGraph",
+        "structuredSyndication",
+        "socialMetadata"
+      ]
+    },
+    "retrieval": {
+      "required": [
+        "querySet"
+      ],
+      "recommended": [
+        "intentSet",
+        "topicSet",
+        "entityDisambiguationQueries",
+        "comparativeQueries"
+      ]
+    },
+    "measurement": {
+      "required": [
+        "observationLedger"
+      ],
+      "recommended": [
+        "searchConsole",
+        "bingWebmaster",
+        "bingAiPerformance",
+        "citationObservations",
+        "referralAnalytics",
+        "conversionObservations"
+      ]
+    }
+  },
+  "invariants": [
+    "visible page content and structured data must agree",
+    "publication identity is explicit rather than inferred from domain alone",
+    "every sampled answer observation records query, surface, date, entity resolution, retrieval, citation or mention, and factuality separately",
+    "corrections update canonical public artifacts rather than only internal notes",
+    "non-commodity original evidence is preferred over commodity summary production",
+    "no special llms.txt or AI-only markup is treated as a Google visibility requirement",
+    "publication owners retain authority over their own editorial content"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "561-public-entity-graph-v1",
+  "version": 1,
+  "nodes": [
+    {
+      "id": "https://561.group/#organization",
+      "kind": "Organization",
+      "name": "The 561 Group",
+      "canonicalUrl": "https://561.group/",
+      "authority": "561-owned",
+      "evidence": [
+        "561-group/2026-08-04-561-group-dynamic-site content/home.md",
+        "561-group/561-group-site public/index.html"
+      ]
+    },
+    {
+      "id": "https://koios.news/#publication",
+      "kind": "NewsMediaOrganization",
+      "name": "Koios.News",
+      "canonicalUrl": "https://koios.news/",
+      "authority": "561-federated-public-enterprise",
+      "evidence": [
+        "emsenn/koios-news README.md",
+        "561-group/2026-08-04-561-group-dynamic-site content/home.md"
+      ]
+    },
+    {
+      "id": "https://cassia-lorne.substack.com/#author",
+      "kind": "Person",
+      "name": "Cassia Lorne",
+      "canonicalUrl": "https://cassia-lorne.substack.com/",
+      "authority": "561-operated-persona-publication",
+      "evidence": [
+        "emsenn/561-group rsc-quiescent Cassia Lorne publication sources"
+      ]
+    },
+    {
+      "id": "https://emsenn.net/#person",
+      "kind": "Person",
+      "name": "emsenn",
+      "canonicalUrl": "https://emsenn.net/",
+      "authority": "personal-observe-only",
+      "evidence": [
+        "public emsenn.net identity surface"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "subject": "https://561.group/#organization",
+      "predicate": "publishes-public-catalog-at",
+      "object": "https://market.561.group/",
+      "status": "asserted-by-canonical-dynamic-site-source"
+    },
+    {
+      "subject": "https://561.group/#organization",
+      "predicate": "federates-with",
+      "object": "https://koios.news/#publication",
+      "status": "asserted-by-canonical-dynamic-site-source",
+      "note": "Do not rewrite as parentOrganization/ownership without stronger evidence; the canonical source calls Koios a sibling public enterprise in the same federation."
+    },
+    {
+      "subject": "https://561.group/#organization",
+      "predicate": "publishes-source-at",
+      "object": "https://github.com/561-group",
+      "status": "asserted-by-canonical-dynamic-site-source"
+    }
+  ],
+  "rule": "Relations are evidence-bearing internal assertions. Public schema.org projection may only map predicates whose semantics are actually warranted; unsupported relations remain custom/internal rather than being coerced into a stronger schema.org claim."
+}
